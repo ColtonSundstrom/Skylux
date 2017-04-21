@@ -8,10 +8,14 @@ Complete project details: http://randomnerdtutorials.com
 '''
 
 import RPi.GPIO as GPIO
+import motor_driver
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
 GPIO.setmode(GPIO.BCM)
+
+#globals
+motorDriver = None
 
 # Create a dictionary called pins to store the pin number, name, and pin state:
 pins = {
@@ -24,8 +28,10 @@ for pin in pins:
    GPIO.setup(pin, GPIO.OUT)
    GPIO.output(pin, GPIO.LOW)
 
+
 @app.route("/")
 def main():
+   global motorDriver
    # For each pin, read the pin state and store it in the pins dictionary:
    for pin in pins:
       pins[pin]['state'] = GPIO.input(pin)
@@ -33,12 +39,15 @@ def main():
    templateData = {
       'pins' : pins
       }
+   
+   motorDriver = motor_driver.MotorDriver(25, 24, 23)
    # Pass the template data into the template main.html and return it to the user
    return render_template('main.html', **templateData)
 
 # The function below is executed when someone requests a URL with the pin number and action in it:
 @app.route("/<changePin>/<action>")
 def action(changePin, action):
+   global motorDriver
    # Convert the pin from the URL into an integer:
    changePin = int(changePin)
    # Get the device name for the pin being changed:
@@ -46,12 +55,19 @@ def action(changePin, action):
    # If the action part of the URL is "on," execute the code indented below:
    if action == "on":
       # Set the pin high:
-      GPIO.output(changePin, GPIO.HIGH)
+      #GPIO.output(changePin, GPIO.HIGH)
+      motorDriver.enable_motor()
+      # Go forward
+      motorDriver.set_duty_cycle(100)
+      
       # Save the status message to be passed into the template:
       message = "Turned " + deviceName + " on."
    if action == "off":
-      GPIO.output(changePin, GPIO.LOW)
+      #GPIO.output(changePin, GPIO.LOW)
       message = "Turned " + deviceName + " off."
+      #Turn off.
+      motorDriver.set_duty_cycle(0)
+      
 
    # For each pin, read the pin state and store it in the pins dictionary:
    for pin in pins:
