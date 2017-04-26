@@ -6,13 +6,13 @@ Modified by Rui Santos
 Complete project details: http://randomnerdtutorials.com
 
 '''
-
+import time
 import RPi.GPIO as GPIO
 import motor_driver
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 
 #globals
 motorDriver = None
@@ -59,7 +59,8 @@ def action(changePin, action):
       motorDriver.enable_motor()
       # Go forward
       motorDriver.set_duty_cycle(100)
-      
+      time.sleep(5)
+      motorDriver.disable_motor()
       # Save the status message to be passed into the template:
       message = "Turned " + deviceName + " on."
    if action == "off":
