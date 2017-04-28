@@ -38,7 +38,10 @@ import time
 import urllib
 import uuid
 
+import motor_driver
 
+#globals
+motorDriver = None
 
 # This XML is the minimum needed to define one of our virtual switches
 # to the Amazon Echo
@@ -365,16 +368,26 @@ class rest_api_handler(object):
 		def __init__(self, on_cmd, off_cmd):
 				self.on_cmd = on_cmd
 				self.off_cmd = off_cmd
+				global motorDriver
+				motorDriver = motor_driver.MotorDriver(25, 24, 23)
 
 		def on(self):
 				#r = requests.get(self.on_cmd)
 				print "I'm on!"
+				motorDriver.enable_motor()
+				motorDriver.set_duty_cycle(100)
+				time.sleep(5)
+				motorDriver.set_duty_cycle(0)
 				#return r.status_code == 200
 				return 200
 
 		def off(self):
 				#r = requests.get(self.off_cmd)
 				print "I'm off!"
+				motorDriver.enable_motor()
+				motorDriver.set_duty_cycle(-100)
+				time.sleep(5)
+				motorDriver.set_duty_cycle(0)
 				#return r.status_code == 200
 				return 200
 

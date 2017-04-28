@@ -27,16 +27,7 @@ h2{
       <img src = "../static/skylux_v2.png" alt = "skylux logo" style = "width:151.5px;height:38.7px;">
       <p>  Main Menu </p>
    </div>
-
-   {% for pin in pins %}
-   <h2>{{ pins[pin].name }}
-   {% if pins[pin].state == true %}
-      is currently <strong>on</strong></h2><div class="row"><div class="col-md-2">
-      <a href="/{{pin}}/off" class="btn btn-block btn-lg btn-default" role="button">Turn off</a></div></div>
-   {% else %}
-      is currently <strong>off</strong></h2><div class="row"><div class="col-md-2">
-      <a href="/{{pin}}/on" class="btn btn-block btn-lg btn-primary" role="button">Turn on</a></div></div>
-   {% endif %}
-   {% endfor %}
+      <a href="/on" class="btn btn-block btn-lg btn-primary" role="button">Turn on</a></div></div>
+      <a href="/off" class="btn btn-block btn-lg btn-default" role="button">Turn off</a></div></div>
 </body>
 </html>
