@@ -1,5 +1,6 @@
 import time
 import motor_driver
+from datetime import timedelta
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
@@ -35,7 +36,13 @@ def action(action):
    
 @app.route("/options")
 def options():
-   return render_template('options.html')
+   with open('/proc/uptime', 'r') as f:
+      uptime_seconds = float(f.readline().split()[0])
+      uptime_string = str(timedelta(seconds = uptime_seconds))
+      uptime_string = uptime_string.split(".")
+      uptime_string = uptime_string[0]
+      
+   return render_template('options.html', time_string=uptime_string)
    
 @app.route("/about")
 def about():
