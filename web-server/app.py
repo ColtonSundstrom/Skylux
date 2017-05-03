@@ -1,6 +1,7 @@
 import time
 import motor_driver
 from datetime import timedelta
+from subprocess import check_output
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
@@ -36,13 +37,22 @@ def action(action):
    
 @app.route("/options")
 def options():
+   # Get the uptime.
    with open('/proc/uptime', 'r') as f:
       uptime_seconds = float(f.readline().split()[0])
       uptime_string = str(timedelta(seconds = uptime_seconds))
       uptime_string = uptime_string.split(".")
       uptime_string = uptime_string[0]
+   
+   # Get the SSID.
+   scanoutput = check_output(["iwlist", "wlan0", "scan"])
+   for line in scanoutput.split():
+      if line.startswith("ESSID"):
+         ssid = line.split('"')[1]
+         
+   print ssid
       
-   return render_template('options.html', time_string=uptime_string)
+   return render_template('options.html', uptime_string=uptime_string, ssid=ssid)
    
 @app.route("/about")
 def about():
