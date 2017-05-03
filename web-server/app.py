@@ -48,11 +48,12 @@ def options():
    scanoutput = check_output(["iwlist", "wlan0", "scan"])
    for line in scanoutput.split():
       if line.startswith("ESSID"):
-         ssid = line.split('"')[1]
-         
-   print ssid
+         ssid_string = line.split('"')[1]
+   
+   # Get the MAC address.
+   mac_string = open('/sys/class/net/eth0/address').read()
       
-   return render_template('options.html', uptime_string=uptime_string, ssid=ssid)
+   return render_template('options.html', uptime_string=uptime_string, ssid_string=ssid_string, mac_string = mac_string)
    
 @app.route("/about")
 def about():
