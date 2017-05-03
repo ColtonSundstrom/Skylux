@@ -1,5 +1,6 @@
 import time
 import motor_driver
+import os
 from datetime import timedelta
 from subprocess import check_output
 from flask import Flask, render_template, request
@@ -45,10 +46,9 @@ def options():
       uptime_string = uptime_string[0]
    
    # Get the SSID.
-   scanoutput = check_output(["iwlist", "wlan0", "scan"])
-   for line in scanoutput.split():
-      if line.startswith("ESSID"):
-         ssid_string = line.split('"')[1]
+   ssid_string = check_output("iwgetid")
+   ssid_string = ssid_string.split('"')
+   ssid_string = ssid_string[1] 
    
    # Get the MAC address.
    mac_string = open('/sys/class/net/eth0/address').read()
@@ -58,6 +58,11 @@ def options():
 @app.route("/about")
 def about():
    return render_template('about.html')
+   
+@app.route("/reboot")
+def reboot():
+   print("Rebooting!")
+   os.system("sudo reboot")
    
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, threaded=True, debug=True)
