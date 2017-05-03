@@ -32,5 +32,14 @@ def action(action):
       motorDriver.set_duty_cycle(0)
 
    return render_template('main.html')
+   
+@app.route("/options")
+def options():
+   return render_template('options.html')
+   
+@app.route("/about")
+def about():
+   return render_template('about.html')
+   
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=80, debug=True)
+   app.run(host='0.0.0.0', port=80, threaded=True, debug=True)
