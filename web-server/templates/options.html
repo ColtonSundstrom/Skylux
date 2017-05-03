@@ -20,6 +20,7 @@ body{
 }
 h2{
    font-family: 'Open Sans Condensed', sans-serif;
+   text-align: center;
 }
 .wrapper {
    text-align: center;
@@ -67,6 +68,10 @@ h2{
 	text-align: center;
 }
 
+.collapse{
+	text-align: center;
+}
+
 </style>
 
 <body style="color:white;">
@@ -75,17 +80,11 @@ h2{
       <p>  <h2> Options </h2> </p>
    </div>
 
-   <div class="btn-group-vertical center-block text-center">
-   	<button type="button" class="btn btn-primary"> <h2>Network</h2> </button>
-   	<button type="button" class="btn btn-primary"> <h2>App Settings</h2> </button>
-   		<div class="btn-group">
-   			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-   		    <h2>Manage Skylights</h2> <span class="caret"></span> </button>
-   			<ul class="dropdown-menu" role = "menu">
-   				<li><a href="#"> <h2>Living Room</h2> </a></li>
-   				<li><a href="#"> <h2>Kitchen</h2></a></li>
-   				<li><a href="#"> <h2>Hallway</h2> </a></li>
-   			</ul>
+   <div class="container">
+   		<h2>Network</h2>
+   		<button type="button" class = "btn btn-info btn-block" data-toggle="collapse" data-target="#network">Information</button>
+   		<div id = "network" class="collapse">
+   		SSID: TestSSID<br>Uptime: {{time_string}}<br>IP: test<br>MAC: test<br>
    		</div>
    	</div>
 </body>
