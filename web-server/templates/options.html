@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+   <title>Skylux Beta Test - Options</title>
+   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+   <!-- Jquery 2.2.4 -->
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+
+<style type="text/css">
+body{
+   background-color: #222211;
+}
+h2{
+   font-family: 'Open Sans Condensed', sans-serif;
+}
+.wrapper {
+   text-align: center;
+}
+
+.button {
+   padding: 15px 25px;
+   font-size: 24px;
+   text-align: center;
+   cursor: pointer;
+   outline: none;
+   color: #fff;
+   background-color: #4CAF50;
+   border: none;
+   border-radius: 15px;
+   box-shadow: 0 9px #999;
+}
+
+.button:hover {
+   background-color: #3e8e41;
+}
+
+.button:active {
+   background-color: #3e8e41;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.dropdown{
+	text-align:center;
+}
+.button, .dropdown-menu{
+	margin:10px auto
+}
+.dropdown-menu{
+	width:400px; 
+	left:50%; 
+	margin-left:-200px;
+	text-align: center;
+}
+
+</style>
+
+<body style="color:white;">
+   <div class = "jumbotron text-center"  style="color:black;">
+      <img src = "../static/skylux_v2.png" alt = "skylux logo" style = "width:254.46px;height:65px;">
+      <p>  <h2> Options </h2> </p>
+   </div>
+
+   <div class="btn-group-vertical center-block text-center">
+   	<button type="button" class="btn btn-primary"> <h2>Network</h2> </button>
+   	<button type="button" class="btn btn-primary"> <h2>App Settings</h2> </button>
+   		<div class="btn-group">
+   			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+   		    <h2>Manage Skylights</h2> <span class="caret"></span> </button>
+   			<ul class="dropdown-menu" role = "menu">
+   				<li><a href="#"> <h2>Living Room</h2> </a></li>
+   				<li><a href="#"> <h2>Kitchen</h2></a></li>
+   				<li><a href="#"> <h2>Hallway</h2> </a></li>
+   			</ul>
+   		</div>
+   	</div>
+</body>
+</html>
+
