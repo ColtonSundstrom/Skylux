@@ -1,6 +1,5 @@
-import time
+import os, time, socket
 import motor_driver
-import os
 from datetime import timedelta
 from subprocess import check_output
 from flask import Flask, render_template, request
@@ -52,8 +51,11 @@ def options():
    
    # Get the MAC address.
    mac_string = open('/sys/class/net/eth0/address').read()
-      
-   return render_template('options.html', uptime_string=uptime_string, ssid_string=ssid_string, mac_string = mac_string)
+   
+   # Get the IP address.
+   ip_string = check_output(['hostname', '-I'])
+
+   return render_template('options.html', uptime_string=uptime_string, ssid_string=ssid_string, mac_string = mac_string, ip_string = ip_string)
    
 @app.route("/about")
 def about():
