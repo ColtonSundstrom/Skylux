@@ -21,14 +21,14 @@ class MotorDriver:
 	
     def set_duty_cycle(self, duty):
         if (duty > 0):
-            GPIO.output(BW_pin, GPIO.LOW)
-            GPIO.output(FW_pin, GPIO.HIGH)
+            GPIO.output(self.BW_pin, GPIO.LOW)
+            GPIO.output(self.FW_pin, GPIO.HIGH)
         elif (duty < 0):
-            GPIO.output(FW_pin, GPIO.LOW)
-            GPIO.output(BW_pin, GPIO.HIGH)
+            GPIO.output(self.FW_pin, GPIO.LOW)
+            GPIO.output(self.BW_pin, GPIO.HIGH)
         else:
-            GPIO.output(BW_pin, GPIO.LOW)
-            GPIO.output(FW_pin, GPIO.LOW)
+            GPIO.output(self.BW_pin, GPIO.LOW)
+            GPIO.output(self.FW_pin, GPIO.LOW)
             
         self.duty = duty
         print("MotorDriver | 'Set' Duty Cycle: {}".format(duty))
