@@ -16,7 +16,7 @@
 
 <style type="text/css">
 body{
-   background-color: #222211;
+   background-color: black;
 }
 h2{
    font-family: 'Open Sans Condensed', sans-serif;
@@ -69,7 +69,16 @@ h2{
 }
 
 .collapse{
+      left:50%; 
 	text-align: center;
+}
+
+.network{
+   text-align: center;
+}
+
+.container{
+   text-align: center;
 }
 
 </style>
@@ -84,9 +93,17 @@ h2{
    		<h2>Network</h2>
    		<button type="button" class = "btn btn-info btn-block" data-toggle="collapse" data-target="#network">Information</button>
    		<div id = "network" class="collapse">
-   		SSID: {{ssid_string}}<br>Uptime: {{uptime_string}}<br>IP: {{ip_string}}<br>MAC: {{mac_string}}<br>
+   		<h2>SSID: {{ssid_string}}<br>Uptime: {{uptime_string}}<br>IP: {{ip_string}}<br>MAC: {{mac_string}}<br></h2>
    		</div>
    	</div>
+
+   <div class="container">
+         <h2>Application</h2>
+         <button type="button" class = "btn btn-info btn-block" data-toggle="collapse" data-target="#application">Information</button>
+         <div id = "application" class="collapse">
+         <h2>Version: 1.0<br>In association with CloudDrop Inc.<br>Cal Poly Capstone 2017 </h2>
+         </div>
+      </div>
 </body>
 </html>
 
