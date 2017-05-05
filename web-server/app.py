@@ -50,7 +50,7 @@ def options():
    ssid_string = ssid_string[1] 
    
    # Get the MAC address.
-   mac_string = open('/sys/class/net/eth0/address').read()
+   mac_string = open('/sys/class/net/wlan0/address').read()
    
    # Get the IP address.
    ip_string = check_output(['hostname', '-I'])
