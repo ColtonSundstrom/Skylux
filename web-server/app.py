@@ -54,6 +54,8 @@ def options():
    
    # Get the IP address.
    ip_string = check_output(['hostname', '-I'])
+   ip_string = ip_string.split(" ")
+   ip_string = ip_string[0]
 
    return render_template('options.html', uptime_string=uptime_string, ssid_string=ssid_string, mac_string = mac_string, ip_string = ip_string)
    
