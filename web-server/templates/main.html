@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <head>
-   <title>Skylux Alpha Test - Raw</title>
-   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   <!-- Optional theme -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-   <!-- Jquery 2.2.4 -->
-   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-   <!-- Latest compiled and minified JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<title>Skylux Beta Test</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!-- Jquery 2.2.4 -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+   <script type='text/javascript'>//<![CDATA[ 
+   	$(window).load(function(){
+   		$(document).ready(function () {
+   			$("#on").button();
+   			$("#on").click(function () {
+   				$(this).button('loading');
+   				window.location.href = "/on";
+   				setTimeout(function () {
+   					$("#on").button('reset').addClass("btn-primary");
+   				}, 6000);
+   			});
+   		});
+	});//]]>  
+</script>
+
+	<script type='text/javascript'>//<![CDATA[ 
+		$(window).load(function(){
+			$(document).ready(function () {
+				$("#off").button();
+				$("#off").click(function () {
+					$(this).button('loading');
+					window.location.href = "/off";
+					setTimeout(function () {
+						$("#off").button('reset').addClass("btn-default");
+					}, 6000);
+				});
+			});
+	});//]]>  
+</script>
+
 </head>
 
 <style type="text/css">
-body{
-   background-color: black;
-}
-h2{
-   font-family: 'Open Sans Condensed', sans-serif;
-}
-.wrapper {
-   text-align: center;
-}
-
-.button {
-   padding: 15px 25px;
-   font-size: 24px;
-   text-align: center;
-   cursor: pointer;
-   outline: none;
-   color: #fff;
-   background-color: #4CAF50;
-   border: none;
-   border-radius: 15px;
-   box-shadow: 0 9px #999;
-}
-
-.button:hover {
-   background-color: #3e8e41;
-}
-
-.button:active {
-   background-color: #3e8e41;
-   box-shadow: 0 5px #666;
-   transform: translateY(4px);
-}
-
-.form-actions {
-    margin: 0;
-    background-color: transparent;
-    text-align: center;
-}
+	body{
+		background-color: black;
+	}
+	h2{
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
+	.wrapper {
+		text-align: center;
+	}
 
 </style>
 
 <body style="color:white;">
-   <div class = "jumbotron text-center"  style="color:black;">
-      <img src = "../static/skylux_v2.png" alt = "skylux logo" style = "width:254.46px;height:65px;">
-      <p>  <h2> Main Menu </h2> </p>
-   </div>
+	<div class = "jumbotron text-center"  style="color:black;">
+		<img src = "../static/skylux_v2.png" alt = "skylux logo" style = "width:254.46px;height:65px;">
+		<p>  <h2> Main Menu </h2> </p>
+	</div>
 
-      <a href="/on" class="btn btn-block btn-lg btn-primary" role="button"><h2>Turn on</h2></a>
-      <a href="/off" class="btn btn-block btn-lg btn-default" role="button"><h2>Turn off</h2></a>
+
+	<button class="btn btn-block btn-lg btn-primary" type="button" id="on" data-loading-text="<h2>Opening Skylight...</h2>"><h2>Turn on</h2></button>
+
+	<button class="btn btn-block btn-lg btn-default" type="button" id="off" data-loading-text="<h2>Closing Skylight...</h2>"><h2>Turn off</h2></button>
 </body>
 </html>
 
