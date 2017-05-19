@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+   <title>Skylux Beta Test - Options</title>
+   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+   <!-- Jquery 2.2.4 -->
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+
+<style type="text/css">
+body{
+   background-color: black;
+}
+h2{
+   font-family: 'Open Sans Condensed', sans-serif;
+   text-align: center;
+}
+h3{
+   font-family: 'Open Sans Condensed', sans-serif;
+   text-align: center;
+   color: black;
+}
+
+.wrapper {
+   text-align: center;
+}
+
+.button {
+   padding: 15px 25px;
+   font-size: 24px;
+   text-align: center;
+   cursor: pointer;
+   outline: none;
+   color: #fff;
+   background-color: #4CAF50;
+   border: none;
+   border-radius: 15px;
+   box-shadow: 0 9px #999;
+}
+
+.button:hover {
+   background-color: #3e8e41;
+}
+
+.button:active {
+   background-color: #3e8e41;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.dropdown{
+  text-align:center;
+}
+.button, .dropdown-menu{
+  margin:10px auto
+}
+.dropdown-menu{
+  width:400px; 
+  left:50%; 
+  margin-left:-200px;
+  text-align: center;
+}
+
+.collapse{
+      left:50%; 
+  text-align: center;
+}
+
+.network{
+   text-align: center;
+}
+
+.container{
+   text-align: center;
+}
+
+input, select, textarea{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+</style>
+
+<body style="color:white;">
+   <div class = "jumbotron text-center"  style="color:black;">
+      <img src = "../static/skylux_v2.png" alt = "skylux logo" style = "width:254.46px;height:65px;">
+      <p>  <h2> Options </h2> </p>
+   </div>
+
+   <div class="container">
+      <h2>Network</h2>
+      <button type="button" class = "btn btn-info btn-block" data-toggle="collapse" data-target="#network">Information</button>
+      <div id = "network" class="collapse">
+      <h2>SSID: {{ssid_string}}<br>Uptime: {{uptime_string}}<br>IP: {{ip_string}}<br>MAC: {{mac_string}}<br></h2>
+      </div>
+    </div>
+
+   <div class="container">
+         <h2>Application</h2>
+         <button type="button" class = "btn btn-info btn-block" data-toggle="collapse" data-target="#application">Information</button>
+         <div id = "application" class="collapse">
+         <h2>Version: 1.0<br>In association with CloudDrop Inc.<br>Cal Poly Capstone 2017 </h2>
+         </div>
+      </div>
+   <div class="container">
+         <h2>Nest</h2>
+         <button type="button" class = "btn btn-info btn-block" data-toggle="collapse" data-target="#nest">Information</button>
+         <div id = "nest" class="collapse">
+               <div style="color:#ffffff;">
+                  <form action="addPin" method="post">
+                      Project file path: <input type="text" name="authpin"><br>
+                     <input type="submit" value="Submit">
+                  </form>
+               </div>
+         </div>
+   </div>
+</body>
+</html>
+
