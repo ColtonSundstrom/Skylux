@@ -28,10 +28,10 @@ def action(action):
    if action == "on":
       # Read from the log file.
       status = Logger.readLog()
-      print status
+      print "Before:" + str(status)
       # Only open the skylight if we've traveled less than 10 seconds.
       # This will change based on the total travel time of operator.
-      if (status < 10):
+      if (status < 20):
          motorDriver.enable_motor()
       	 motorDriver.set_duty_cycle(100)
          time.sleep(5)
@@ -44,7 +44,7 @@ def action(action):
    if action == "off":
       # Read from the log file.
       status = Logger.readLog()
-      print status
+      print "Before:" + str(status)
       # Only close skylight if we have travel left to go.
       if (status >= 5):
          motorDriver.enable_motor()
