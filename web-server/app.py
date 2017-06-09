@@ -9,6 +9,7 @@ app = Flask(__name__)
 #globals
 motorDriver = None
 Logger = None
+inOperation = False
 
 @app.route("/")
 def main():
@@ -18,45 +19,60 @@ def main():
    Logger = logger.Logger("log.txt")
    return render_template('main.html')
 
+# Debug: 1 second in
+@app.route("/debug")
+def debug():
+	global motorDriver
+	motorDriver.enable_motor()
+        motorDriver.set_duty_cycle(-100)
+        time.sleep(1)
+        motorDriver.set_duty_cycle(0)
+	return render_template('main.html')
 # The function below is executed when someone requests a URL with the pin number and action in it:
 @app.route("/<action>")
 def action(action):
    global motorDriver
    global Logger
+   global inOperation
    #error = None
    #print request.args.get('error')
-   if action == "on":
-      # Read from the log file.
-      status = Logger.readLog()
-      print "Before:" + str(status)
-      # Only open the skylight if we've traveled less than 10 seconds.
-      # This will change based on the total travel time of operator.
-      if (status < 20):
-         motorDriver.enable_motor()
-      	 motorDriver.set_duty_cycle(100)
-         time.sleep(5)
-         motorDriver.set_duty_cycle(0)
-         # Add five seconds to log file.
-         Logger.writeLog(str(status + 5))
-      else:
-         print "Cannot open any further."
-         #error="open"
-   if action == "off":
-      # Read from the log file.
-      status = Logger.readLog()
-      print "Before:" + str(status)
-      # Only close skylight if we have travel left to go.
-      if (status >= 5):
-         motorDriver.enable_motor()
-         motorDriver.set_duty_cycle(-100)
-         time.sleep(5)
-         motorDriver.set_duty_cycle(0)
-         # Subtract five seconds from log file.
-         Logger.writeLog(str(status - 5))
-      else:
-         print "Cannot close any further."
-         #error="close"
-   #return render_template('main.html', error=error)
+   if (not inOperation):
+      inOperation = True
+      if action == "on":
+         # Read from the log file.
+         status = Logger.readLog()
+         print "Before:" + str(status)
+         # Only open the skylight if we've traveled less than 10 seconds.
+         # This will change based on the total travel time of operator.
+         if (status < 15):
+            Logger.writeLog(str(status + 5))
+	    motorDriver.enable_motor()
+      	    motorDriver.set_duty_cycle(100)
+            time.sleep(5)
+            motorDriver.set_duty_cycle(0)
+            # Add five seconds to log file.
+            #Logger.writeLog(str(status + 5))
+         else:
+            print "Cannot open any further."
+            #error="open"
+      if action == "off":
+         # Read from the log file.
+         status = Logger.readLog()
+         print "Before:" + str(status)
+         # Only close skylight if we have travel left to go.
+         if (status >= 5):
+            Logger.writeLog(str(status -5))
+	    motorDriver.enable_motor()
+            motorDriver.set_duty_cycle(-100)
+            time.sleep(4.75)
+            motorDriver.set_duty_cycle(0)
+            # Subtract five seconds from log file.
+            #Logger.writeLog(str(status - 5))
+         else:
+            print "Cannot close any further."
+            #error="close"
+      #return render_template('main.html', error=error)
+   inOperation = False
    return render_template('main.html')
 @app.route("/options")
 def options():

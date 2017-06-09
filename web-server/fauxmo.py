@@ -39,10 +39,11 @@ import urllib
 import uuid
 
 import motor_driver
+import logger
 
 #globals
 motorDriver = None
-
+Logger = None
 # This XML is the minimum needed to define one of our virtual switches
 # to the Amazon Echo
 
@@ -369,27 +370,41 @@ class rest_api_handler(object):
 				self.on_cmd = on_cmd
 				self.off_cmd = off_cmd
 				global motorDriver
+				global Logger
 				motorDriver = motor_driver.MotorDriver(25, 24, 23)
-
+				Logger = logger.Logger("log.txt")
 		def on(self):
 				#r = requests.get(self.on_cmd)
-				print "I'm on!"
-				motorDriver.enable_motor()
-				motorDriver.set_duty_cycle(100)
-				time.sleep(5)
-				motorDriver.set_duty_cycle(0)
-				#return r.status_code == 200
-				return 200
+				status = Logger.readLog()
+				if (status < 15):
+					print "I'm on!"
+					motorDriver.enable_motor()
+					motorDriver.set_duty_cycle(100)
+					time.sleep(5)
+					motorDriver.set_duty_cycle(0)
+					#return r.status_code == 200
+					Logger.writeLog(str(status + 5))
+					return 200
+				else:
+					print "Cannot open any further."
+					return 200
 
 		def off(self):
 				#r = requests.get(self.off_cmd)
-				print "I'm off!"
-				motorDriver.enable_motor()
-				motorDriver.set_duty_cycle(-100)
-				time.sleep(5)
-				motorDriver.set_duty_cycle(0)
-				#return r.status_code == 200
-				return 200
+				status = Logger.readLog()
+				if (status >= 5):
+					print "I'm off!"
+					motorDriver.enable_motor()
+					motorDriver.set_duty_cycle(-100)
+					time.sleep(4.75)
+					motorDriver.set_duty_cycle(0)
+					#return r.status_code == 200
+					Logger.writeLog(str(status - 5))
+					return 200
+				else:
+					print "cannot close any further."
+					return 200
+				
 
 
 # Each entry is a list with the following elements:
