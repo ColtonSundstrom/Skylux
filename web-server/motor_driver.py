@@ -4,7 +4,6 @@ GPIO.setmode(GPIO.BCM)
 
 class MotorDriver:
 
-
     def __init__(self, EN_pin, FW_pin, BW_pin):
         GPIO.setup(EN_pin, GPIO.OUT)
         GPIO.setup(FW_pin, GPIO.OUT)
@@ -17,7 +16,7 @@ class MotorDriver:
         self.FW_pin = FW_pin
         self.BW_pin = BW_pin
         
-    	self.set_duty_cycle(0)
+        self.set_duty_cycle(0)
 	
     def set_duty_cycle(self, duty):
         if (duty > 0):
