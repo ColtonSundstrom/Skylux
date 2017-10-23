@@ -13,7 +13,7 @@ import pyb
 import micropython
 
 
-## This is a system-wide list of all the queues and shared variables. It is
+# This is a system-wide list of all the queues and shared variables. It is
 #  used to create diagnostic printouts. 
 share_list = []
 

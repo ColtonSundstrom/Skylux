@@ -96,6 +96,7 @@ class poller:
             fileno = target.fileno()
         if self.use_poll:
             self.poller.unregister(fileno)
+
         del(self.targets[fileno])
 
     def poll(self, timeout = 0):
