@@ -1,14 +1,16 @@
-# Testing MQTT handler for the skylux syystem
+# MQTT handler for the skylux syystem
 
 import paho.mqtt.client as mqtt
 import time
 
-SERVER = 'iot.eclipse.org'
+SERVER = 'coltonsundstrom.net'
+PORT = 1883
+KEEPALIVE = 60
 
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code: " + str(rc))
-    client.subscribe("sensors/temp")
+    client.subscribe("SKYLUX/command")
 
 def on_message(client, userdata, msg):
     print("Topic: {}, MSG: {}".format(msg.topic, msg.payload))
@@ -19,18 +21,11 @@ def on_message(client, userdata, msg):
     else:
         print("Unknown command")
 
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
+def initMQTT():
+    client = mqtt.Client()
+    client.on_connect = on_connect
+    client.on_message = on_message
 
-client.connect("localhost", 1883, 60)
+    client.connect(SERVER, PORT, KEEPALIVE)
 
-client.loop_start()
-
-time.sleep(2)
-
-try:
-    client.loop_forever()
-except KeyboardInterrupt:
-    client.disconnect()
-
+    return client

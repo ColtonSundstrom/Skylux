@@ -402,7 +402,7 @@ class rest_api_handler(object):
         Logger = logger.Logger("log.txt")
 
     def on(self):
-        #r = requests.get(self.on_cmd)
+        # r = requests.get(self.on_cmd)
         status = Logger.readLog()
 
         if (status < 15):
@@ -423,7 +423,7 @@ class rest_api_handler(object):
 
 
     def off(self):
-        #r = requests.get(self.off_cmd)
+        # r = requests.get(self.off_cmd)
         status = Logger.readLog()
 
         if (status >= 5):
