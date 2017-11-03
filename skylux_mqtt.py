@@ -1,7 +1,6 @@
 # MQTT handler for the skylux syystem
 
 import paho.mqtt.client as mqtt
-import time
 
 SERVER = 'coltonsundstrom.net'
 PORT = 1883

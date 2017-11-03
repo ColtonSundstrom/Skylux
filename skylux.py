@@ -8,17 +8,11 @@
 #
 #  @author Colton Sundstrom
 
-import pyb
-import micropython
-
 import cotask
-import task_share
+import time
 
-import logger
+from webserver import logger, fauxmo, motor_driver
 import skylux_mqtt
-import fauxmo
-import app
-import motor_driver
 
 MD_ENB_PIN = 25
 MD_FWD_PIN = 24
@@ -33,9 +27,9 @@ MD_BWD_PIN = 23
 # and off command are invoked respectively. It ignores any return data.
 motorDriver = None
 Logger = None
+motorHandler = None
 
 class motor_handler(object):
-
     def __init__(self):
         global motorDriver
         global Logger
@@ -79,7 +73,8 @@ class motor_handler(object):
             return 200
 
 
-def fauxmoControl(motorHandler):
+def fauxmoControl():
+    global motorHandler
     skylux_faux = ['Skylight', motorHandler]
 
     p = fauxmo.poller()
@@ -103,13 +98,34 @@ def fauxmoControl(motorHandler):
     print("Fauxmo control failed due to exception.")
 
 
+def mqttControl():
+    client = skylux_mqtt.initMQTT()
+
+    while True:
+        client.loop_start()
+        time.sleep(.1)
+        client.loop_stop()
+        yield()
+
+
 if __name__ == "__main__":
     print("Skylux Project Main()")
+    global motorHandler
 
     motorHandler = motor_handler()
     mqttClient = skylux_mqtt.initMQTT()
 
     ##implement way to listen to MQTT
 
+    mqttTask = cotask.Task(mqttControl, name = 'MQTT_Listener', priority= 2,
+                           period = 1000, profile = True, trace = False)
+    fauxmoTask = cotask.Task (fauxmoControl, name = "Fauxmo", priority = 1,
+                              period = 100, profile = True, trace = False)
+
+    cotask.task_list.append(mqttTask)
+    cotask.task_list.append(fauxmoTask)
+
+    while True:
+        cotask.task_list.pri_sched()
 
 
