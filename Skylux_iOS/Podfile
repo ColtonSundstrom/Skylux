@@ -1,0 +1,16 @@
+target 'Skylux_iOS' do
+  use_frameworks!
+
+  project 'Skylux_iOS.xcodeproj'
+
+  pod 'Moscapsule', :git => 'https://github.com/flightonary/Moscapsule.git'
+  pod 'OpenSSL-Universal'
+
+  target 'Skylux_iOSTests' do
+    inherit! :search_paths
+  end
+
+  target 'Skylux_iOSUITests' do
+    inherit! :search_paths
+  end
+end

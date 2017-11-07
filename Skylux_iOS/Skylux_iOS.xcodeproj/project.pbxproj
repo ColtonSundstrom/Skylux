@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2E1AAC44191DAA171CC8C4 /* Pods_Skylux_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042463083CCF98CA56D95303 /* Pods_Skylux_iOS.framework */; };
+		7FCA220B9CFCBB9F7E6C82C0 /* Pods_Skylux_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEC356D4444252CE9628B18 /* Pods_Skylux_iOSUITests.framework */; };
+		970D63EB708F04AE48A47398 /* Pods_Skylux_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D50C8190841E03AFD97B88 /* Pods_Skylux_iOSTests.framework */; };
 		D79E956A1FB1759F0069D5B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E95691FB1759F0069D5B7 /* AppDelegate.swift */; };
 		D79E956C1FB1759F0069D5B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E956B1FB1759F0069D5B7 /* ViewController.swift */; };
 		D79E956F1FB1759F0069D5B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79E956D1FB1759F0069D5B7 /* Main.storyboard */; };
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042463083CCF98CA56D95303 /* Pods_Skylux_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skylux_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04807EE7F1006E2BAA94EACE /* Pods-Skylux_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skylux_iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Skylux_iOSUITests/Pods-Skylux_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4577A0DC961A9362D245F071 /* Pods-Skylux_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skylux_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Skylux_iOS/Pods-Skylux_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		49D50C8190841E03AFD97B88 /* Pods_Skylux_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skylux_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5218999C6B39208EE3E2185D /* Pods-Skylux_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skylux_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Skylux_iOSTests/Pods-Skylux_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		8248BC8D29619E98F6D055B8 /* Pods-Skylux_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skylux_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Skylux_iOSTests/Pods-Skylux_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDEC356D4444252CE9628B18 /* Pods_Skylux_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Skylux_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE00C448BF773270000CF1AE /* Pods-Skylux_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skylux_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Skylux_iOS/Pods-Skylux_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D79E95661FB1759F0069D5B7 /* Skylux_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylux_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79E95691FB1759F0069D5B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D79E956B1FB1759F0069D5B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		D79E95851FB1759F0069D5B7 /* Skylux_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skylux_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79E95891FB1759F0069D5B7 /* Skylux_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skylux_iOSUITests.swift; sourceTree = "<group>"; };
 		D79E958B1FB1759F0069D5B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F02D10654DF68F12BF52A37A /* Pods-Skylux_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skylux_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Skylux_iOSUITests/Pods-Skylux_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2E1AAC44191DAA171CC8C4 /* Pods_Skylux_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				970D63EB708F04AE48A47398 /* Pods_Skylux_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCA220B9CFCBB9F7E6C82C0 /* Pods_Skylux_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AA6B80CD14D7793D5A918FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4577A0DC961A9362D245F071 /* Pods-Skylux_iOS.debug.xcconfig */,
+				CE00C448BF773270000CF1AE /* Pods-Skylux_iOS.release.xcconfig */,
+				8248BC8D29619E98F6D055B8 /* Pods-Skylux_iOSTests.debug.xcconfig */,
+				5218999C6B39208EE3E2185D /* Pods-Skylux_iOSTests.release.xcconfig */,
+				04807EE7F1006E2BAA94EACE /* Pods-Skylux_iOSUITests.debug.xcconfig */,
+				F02D10654DF68F12BF52A37A /* Pods-Skylux_iOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D79E955D1FB1759F0069D5B7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				D79E957D1FB1759F0069D5B7 /* Skylux_iOSTests */,
 				D79E95881FB1759F0069D5B7 /* Skylux_iOSUITests */,
 				D79E95671FB1759F0069D5B7 /* Products */,
+				6AA6B80CD14D7793D5A918FA /* Pods */,
+				F6ED7A286D61D1B753B0DCC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = Skylux_iOSUITests;
 			sourceTree = "<group>";
 		};
+		F6ED7A286D61D1B753B0DCC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				042463083CCF98CA56D95303 /* Pods_Skylux_iOS.framework */,
+				49D50C8190841E03AFD97B88 /* Pods_Skylux_iOSTests.framework */,
+				CDEC356D4444252CE9628B18 /* Pods_Skylux_iOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D79E958E1FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOS" */;
 			buildPhases = (
+				4611D5C839543DB5EC587959 /* [CP] Check Pods Manifest.lock */,
 				D79E95621FB1759F0069D5B7 /* Sources */,
 				D79E95631FB1759F0069D5B7 /* Frameworks */,
 				D79E95641FB1759F0069D5B7 /* Resources */,
+				E15327060824CB2B348B971E /* [CP] Embed Pods Frameworks */,
+				6B3C3F3233B6ED019382CADB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D79E95911FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOSTests" */;
 			buildPhases = (
+				1E5F14C7F3F09356B1F98EFD /* [CP] Check Pods Manifest.lock */,
 				D79E95761FB1759F0069D5B7 /* Sources */,
 				D79E95771FB1759F0069D5B7 /* Frameworks */,
 				D79E95781FB1759F0069D5B7 /* Resources */,
+				AB57391DF3AF19D10827269A /* [CP] Embed Pods Frameworks */,
+				1047F59D466C6C5BFA5B4304 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D79E95941FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOSUITests" */;
 			buildPhases = (
+				CDB8D7A6AEB8935C0E2BA871 /* [CP] Check Pods Manifest.lock */,
 				D79E95811FB1759F0069D5B7 /* Sources */,
 				D79E95821FB1759F0069D5B7 /* Frameworks */,
 				D79E95831FB1759F0069D5B7 /* Resources */,
+				E242E196EFF9347044D65978 /* [CP] Embed Pods Frameworks */,
+				9B1B303324D471D8B596590F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1047F59D466C6C5BFA5B4304 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOSTests/Pods-Skylux_iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E5F14C7F3F09356B1F98EFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Skylux_iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4611D5C839543DB5EC587959 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Skylux_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3C3F3233B6ED019382CADB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOS/Pods-Skylux_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B1B303324D471D8B596590F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOSUITests/Pods-Skylux_iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB57391DF3AF19D10827269A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOSTests/Pods-Skylux_iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDB8D7A6AEB8935C0E2BA871 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Skylux_iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E15327060824CB2B348B971E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOS/Pods-Skylux_iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Moscapsule/Moscapsule.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moscapsule.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOS/Pods-Skylux_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E242E196EFF9347044D65978 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Skylux_iOSUITests/Pods-Skylux_iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D79E95621FB1759F0069D5B7 /* Sources */ = {
@@ -424,6 +623,7 @@
 		};
 		D79E958F1FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4577A0DC961A9362D245F071 /* Pods-Skylux_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +639,7 @@
 		};
 		D79E95901FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE00C448BF773270000CF1AE /* Pods-Skylux_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +655,7 @@
 		};
 		D79E95921FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8248BC8D29619E98F6D055B8 /* Pods-Skylux_iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +673,7 @@
 		};
 		D79E95931FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5218999C6B39208EE3E2185D /* Pods-Skylux_iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +691,7 @@
 		};
 		D79E95951FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04807EE7F1006E2BAA94EACE /* Pods-Skylux_iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +708,7 @@
 		};
 		D79E95961FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F02D10654DF68F12BF52A37A /* Pods-Skylux_iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
