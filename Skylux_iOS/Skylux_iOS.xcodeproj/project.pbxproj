@@ -7,64 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D735AF411FB16E8700A674F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735AF401FB16E8700A674F7 /* AppDelegate.swift */; };
-		D735AF431FB16E8700A674F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735AF421FB16E8700A674F7 /* ViewController.swift */; };
-		D735AF461FB16E8700A674F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D735AF441FB16E8700A674F7 /* Main.storyboard */; };
-		D735AF481FB16E8700A674F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D735AF471FB16E8700A674F7 /* Assets.xcassets */; };
-		D735AF4B1FB16E8700A674F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D735AF491FB16E8700A674F7 /* LaunchScreen.storyboard */; };
-		D735AF561FB16E8700A674F7 /* SkyluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735AF551FB16E8700A674F7 /* SkyluxTests.swift */; };
-		D735AF611FB16E8700A674F7 /* SkyluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735AF601FB16E8700A674F7 /* SkyluxUITests.swift */; };
+		D79E956A1FB1759F0069D5B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E95691FB1759F0069D5B7 /* AppDelegate.swift */; };
+		D79E956C1FB1759F0069D5B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E956B1FB1759F0069D5B7 /* ViewController.swift */; };
+		D79E956F1FB1759F0069D5B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79E956D1FB1759F0069D5B7 /* Main.storyboard */; };
+		D79E95711FB1759F0069D5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79E95701FB1759F0069D5B7 /* Assets.xcassets */; };
+		D79E95741FB1759F0069D5B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79E95721FB1759F0069D5B7 /* LaunchScreen.storyboard */; };
+		D79E957F1FB1759F0069D5B7 /* Skylux_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E957E1FB1759F0069D5B7 /* Skylux_iOSTests.swift */; };
+		D79E958A1FB1759F0069D5B7 /* Skylux_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E95891FB1759F0069D5B7 /* Skylux_iOSUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D735AF521FB16E8700A674F7 /* PBXContainerItemProxy */ = {
+		D79E957B1FB1759F0069D5B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D735AF351FB16E8600A674F7 /* Project object */;
+			containerPortal = D79E955E1FB1759F0069D5B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D735AF3C1FB16E8600A674F7;
-			remoteInfo = Skylux;
+			remoteGlobalIDString = D79E95651FB1759F0069D5B7;
+			remoteInfo = Skylux_iOS;
 		};
-		D735AF5D1FB16E8700A674F7 /* PBXContainerItemProxy */ = {
+		D79E95861FB1759F0069D5B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D735AF351FB16E8600A674F7 /* Project object */;
+			containerPortal = D79E955E1FB1759F0069D5B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D735AF3C1FB16E8600A674F7;
-			remoteInfo = Skylux;
+			remoteGlobalIDString = D79E95651FB1759F0069D5B7;
+			remoteInfo = Skylux_iOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D735AF3D1FB16E8700A674F7 /* Skylux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylux.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D735AF401FB16E8700A674F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D735AF421FB16E8700A674F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D735AF451FB16E8700A674F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D735AF471FB16E8700A674F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D735AF4A1FB16E8700A674F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D735AF4C1FB16E8700A674F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D735AF511FB16E8700A674F7 /* SkyluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D735AF551FB16E8700A674F7 /* SkyluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyluxTests.swift; sourceTree = "<group>"; };
-		D735AF571FB16E8700A674F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D735AF5C1FB16E8700A674F7 /* SkyluxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyluxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D735AF601FB16E8700A674F7 /* SkyluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyluxUITests.swift; sourceTree = "<group>"; };
-		D735AF621FB16E8800A674F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79E95661FB1759F0069D5B7 /* Skylux_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylux_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79E95691FB1759F0069D5B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D79E956B1FB1759F0069D5B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D79E956E1FB1759F0069D5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D79E95701FB1759F0069D5B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D79E95731FB1759F0069D5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D79E95751FB1759F0069D5B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79E957A1FB1759F0069D5B7 /* Skylux_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skylux_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79E957E1FB1759F0069D5B7 /* Skylux_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skylux_iOSTests.swift; sourceTree = "<group>"; };
+		D79E95801FB1759F0069D5B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79E95851FB1759F0069D5B7 /* Skylux_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skylux_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79E95891FB1759F0069D5B7 /* Skylux_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skylux_iOSUITests.swift; sourceTree = "<group>"; };
+		D79E958B1FB1759F0069D5B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D735AF3A1FB16E8600A674F7 /* Frameworks */ = {
+		D79E95631FB1759F0069D5B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D735AF4E1FB16E8700A674F7 /* Frameworks */ = {
+		D79E95771FB1759F0069D5B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D735AF591FB16E8700A674F7 /* Frameworks */ = {
+		D79E95821FB1759F0069D5B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,140 +74,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D735AF341FB16E8600A674F7 = {
+		D79E955D1FB1759F0069D5B7 = {
 			isa = PBXGroup;
 			children = (
-				D735AF3F1FB16E8700A674F7 /* Skylux */,
-				D735AF541FB16E8700A674F7 /* SkyluxTests */,
-				D735AF5F1FB16E8700A674F7 /* SkyluxUITests */,
-				D735AF3E1FB16E8700A674F7 /* Products */,
+				D79E95681FB1759F0069D5B7 /* Skylux_iOS */,
+				D79E957D1FB1759F0069D5B7 /* Skylux_iOSTests */,
+				D79E95881FB1759F0069D5B7 /* Skylux_iOSUITests */,
+				D79E95671FB1759F0069D5B7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D735AF3E1FB16E8700A674F7 /* Products */ = {
+		D79E95671FB1759F0069D5B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D735AF3D1FB16E8700A674F7 /* Skylux.app */,
-				D735AF511FB16E8700A674F7 /* SkyluxTests.xctest */,
-				D735AF5C1FB16E8700A674F7 /* SkyluxUITests.xctest */,
+				D79E95661FB1759F0069D5B7 /* Skylux_iOS.app */,
+				D79E957A1FB1759F0069D5B7 /* Skylux_iOSTests.xctest */,
+				D79E95851FB1759F0069D5B7 /* Skylux_iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D735AF3F1FB16E8700A674F7 /* Skylux */ = {
+		D79E95681FB1759F0069D5B7 /* Skylux_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D735AF401FB16E8700A674F7 /* AppDelegate.swift */,
-				D735AF421FB16E8700A674F7 /* ViewController.swift */,
-				D735AF441FB16E8700A674F7 /* Main.storyboard */,
-				D735AF471FB16E8700A674F7 /* Assets.xcassets */,
-				D735AF491FB16E8700A674F7 /* LaunchScreen.storyboard */,
-				D735AF4C1FB16E8700A674F7 /* Info.plist */,
+				D79E95691FB1759F0069D5B7 /* AppDelegate.swift */,
+				D79E956B1FB1759F0069D5B7 /* ViewController.swift */,
+				D79E956D1FB1759F0069D5B7 /* Main.storyboard */,
+				D79E95701FB1759F0069D5B7 /* Assets.xcassets */,
+				D79E95721FB1759F0069D5B7 /* LaunchScreen.storyboard */,
+				D79E95751FB1759F0069D5B7 /* Info.plist */,
 			);
-			path = Skylux;
+			path = Skylux_iOS;
 			sourceTree = "<group>";
 		};
-		D735AF541FB16E8700A674F7 /* SkyluxTests */ = {
+		D79E957D1FB1759F0069D5B7 /* Skylux_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				D735AF551FB16E8700A674F7 /* SkyluxTests.swift */,
-				D735AF571FB16E8700A674F7 /* Info.plist */,
+				D79E957E1FB1759F0069D5B7 /* Skylux_iOSTests.swift */,
+				D79E95801FB1759F0069D5B7 /* Info.plist */,
 			);
-			path = SkyluxTests;
+			path = Skylux_iOSTests;
 			sourceTree = "<group>";
 		};
-		D735AF5F1FB16E8700A674F7 /* SkyluxUITests */ = {
+		D79E95881FB1759F0069D5B7 /* Skylux_iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D735AF601FB16E8700A674F7 /* SkyluxUITests.swift */,
-				D735AF621FB16E8800A674F7 /* Info.plist */,
+				D79E95891FB1759F0069D5B7 /* Skylux_iOSUITests.swift */,
+				D79E958B1FB1759F0069D5B7 /* Info.plist */,
 			);
-			path = SkyluxUITests;
+			path = Skylux_iOSUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D735AF3C1FB16E8600A674F7 /* Skylux */ = {
+		D79E95651FB1759F0069D5B7 /* Skylux_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D735AF651FB16E8800A674F7 /* Build configuration list for PBXNativeTarget "Skylux" */;
+			buildConfigurationList = D79E958E1FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOS" */;
 			buildPhases = (
-				D735AF391FB16E8600A674F7 /* Sources */,
-				D735AF3A1FB16E8600A674F7 /* Frameworks */,
-				D735AF3B1FB16E8600A674F7 /* Resources */,
+				D79E95621FB1759F0069D5B7 /* Sources */,
+				D79E95631FB1759F0069D5B7 /* Frameworks */,
+				D79E95641FB1759F0069D5B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Skylux;
-			productName = Skylux;
-			productReference = D735AF3D1FB16E8700A674F7 /* Skylux.app */;
+			name = Skylux_iOS;
+			productName = Skylux_iOS;
+			productReference = D79E95661FB1759F0069D5B7 /* Skylux_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D735AF501FB16E8700A674F7 /* SkyluxTests */ = {
+		D79E95791FB1759F0069D5B7 /* Skylux_iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D735AF681FB16E8800A674F7 /* Build configuration list for PBXNativeTarget "SkyluxTests" */;
+			buildConfigurationList = D79E95911FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOSTests" */;
 			buildPhases = (
-				D735AF4D1FB16E8700A674F7 /* Sources */,
-				D735AF4E1FB16E8700A674F7 /* Frameworks */,
-				D735AF4F1FB16E8700A674F7 /* Resources */,
+				D79E95761FB1759F0069D5B7 /* Sources */,
+				D79E95771FB1759F0069D5B7 /* Frameworks */,
+				D79E95781FB1759F0069D5B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D735AF531FB16E8700A674F7 /* PBXTargetDependency */,
+				D79E957C1FB1759F0069D5B7 /* PBXTargetDependency */,
 			);
-			name = SkyluxTests;
-			productName = SkyluxTests;
-			productReference = D735AF511FB16E8700A674F7 /* SkyluxTests.xctest */;
+			name = Skylux_iOSTests;
+			productName = Skylux_iOSTests;
+			productReference = D79E957A1FB1759F0069D5B7 /* Skylux_iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D735AF5B1FB16E8700A674F7 /* SkyluxUITests */ = {
+		D79E95841FB1759F0069D5B7 /* Skylux_iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D735AF6B1FB16E8800A674F7 /* Build configuration list for PBXNativeTarget "SkyluxUITests" */;
+			buildConfigurationList = D79E95941FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOSUITests" */;
 			buildPhases = (
-				D735AF581FB16E8700A674F7 /* Sources */,
-				D735AF591FB16E8700A674F7 /* Frameworks */,
-				D735AF5A1FB16E8700A674F7 /* Resources */,
+				D79E95811FB1759F0069D5B7 /* Sources */,
+				D79E95821FB1759F0069D5B7 /* Frameworks */,
+				D79E95831FB1759F0069D5B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D735AF5E1FB16E8700A674F7 /* PBXTargetDependency */,
+				D79E95871FB1759F0069D5B7 /* PBXTargetDependency */,
 			);
-			name = SkyluxUITests;
-			productName = SkyluxUITests;
-			productReference = D735AF5C1FB16E8700A674F7 /* SkyluxUITests.xctest */;
+			name = Skylux_iOSUITests;
+			productName = Skylux_iOSUITests;
+			productReference = D79E95851FB1759F0069D5B7 /* Skylux_iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D735AF351FB16E8600A674F7 /* Project object */ = {
+		D79E955E1FB1759F0069D5B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "James Green";
 				TargetAttributes = {
-					D735AF3C1FB16E8600A674F7 = {
+					D79E95651FB1759F0069D5B7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					D735AF501FB16E8700A674F7 = {
+					D79E95791FB1759F0069D5B7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D735AF3C1FB16E8600A674F7;
+						TestTargetID = D79E95651FB1759F0069D5B7;
 					};
-					D735AF5B1FB16E8700A674F7 = {
+					D79E95841FB1759F0069D5B7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D735AF3C1FB16E8600A674F7;
+						TestTargetID = D79E95651FB1759F0069D5B7;
 					};
 				};
 			};
-			buildConfigurationList = D735AF381FB16E8600A674F7 /* Build configuration list for PBXProject "Skylux" */;
+			buildConfigurationList = D79E95611FB1759F0069D5B7 /* Build configuration list for PBXProject "Skylux_iOS" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,37 +215,37 @@
 				en,
 				Base,
 			);
-			mainGroup = D735AF341FB16E8600A674F7;
-			productRefGroup = D735AF3E1FB16E8700A674F7 /* Products */;
+			mainGroup = D79E955D1FB1759F0069D5B7;
+			productRefGroup = D79E95671FB1759F0069D5B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D735AF3C1FB16E8600A674F7 /* Skylux */,
-				D735AF501FB16E8700A674F7 /* SkyluxTests */,
-				D735AF5B1FB16E8700A674F7 /* SkyluxUITests */,
+				D79E95651FB1759F0069D5B7 /* Skylux_iOS */,
+				D79E95791FB1759F0069D5B7 /* Skylux_iOSTests */,
+				D79E95841FB1759F0069D5B7 /* Skylux_iOSUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D735AF3B1FB16E8600A674F7 /* Resources */ = {
+		D79E95641FB1759F0069D5B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D735AF4B1FB16E8700A674F7 /* LaunchScreen.storyboard in Resources */,
-				D735AF481FB16E8700A674F7 /* Assets.xcassets in Resources */,
-				D735AF461FB16E8700A674F7 /* Main.storyboard in Resources */,
+				D79E95741FB1759F0069D5B7 /* LaunchScreen.storyboard in Resources */,
+				D79E95711FB1759F0069D5B7 /* Assets.xcassets in Resources */,
+				D79E956F1FB1759F0069D5B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D735AF4F1FB16E8700A674F7 /* Resources */ = {
+		D79E95781FB1759F0069D5B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D735AF5A1FB16E8700A674F7 /* Resources */ = {
+		D79E95831FB1759F0069D5B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,59 +255,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D735AF391FB16E8600A674F7 /* Sources */ = {
+		D79E95621FB1759F0069D5B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D735AF431FB16E8700A674F7 /* ViewController.swift in Sources */,
-				D735AF411FB16E8700A674F7 /* AppDelegate.swift in Sources */,
+				D79E956C1FB1759F0069D5B7 /* ViewController.swift in Sources */,
+				D79E956A1FB1759F0069D5B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D735AF4D1FB16E8700A674F7 /* Sources */ = {
+		D79E95761FB1759F0069D5B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D735AF561FB16E8700A674F7 /* SkyluxTests.swift in Sources */,
+				D79E957F1FB1759F0069D5B7 /* Skylux_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D735AF581FB16E8700A674F7 /* Sources */ = {
+		D79E95811FB1759F0069D5B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D735AF611FB16E8700A674F7 /* SkyluxUITests.swift in Sources */,
+				D79E958A1FB1759F0069D5B7 /* Skylux_iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D735AF531FB16E8700A674F7 /* PBXTargetDependency */ = {
+		D79E957C1FB1759F0069D5B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D735AF3C1FB16E8600A674F7 /* Skylux */;
-			targetProxy = D735AF521FB16E8700A674F7 /* PBXContainerItemProxy */;
+			target = D79E95651FB1759F0069D5B7 /* Skylux_iOS */;
+			targetProxy = D79E957B1FB1759F0069D5B7 /* PBXContainerItemProxy */;
 		};
-		D735AF5E1FB16E8700A674F7 /* PBXTargetDependency */ = {
+		D79E95871FB1759F0069D5B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D735AF3C1FB16E8600A674F7 /* Skylux */;
-			targetProxy = D735AF5D1FB16E8700A674F7 /* PBXContainerItemProxy */;
+			target = D79E95651FB1759F0069D5B7 /* Skylux_iOS */;
+			targetProxy = D79E95861FB1759F0069D5B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D735AF441FB16E8700A674F7 /* Main.storyboard */ = {
+		D79E956D1FB1759F0069D5B7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D735AF451FB16E8700A674F7 /* Base */,
+				D79E956E1FB1759F0069D5B7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D735AF491FB16E8700A674F7 /* LaunchScreen.storyboard */ = {
+		D79E95721FB1759F0069D5B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D735AF4A1FB16E8700A674F7 /* Base */,
+				D79E95731FB1759F0069D5B7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D735AF631FB16E8800A674F7 /* Debug */ = {
+		D79E958C1FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		D735AF641FB16E8800A674F7 /* Release */ = {
+		D79E958D1FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,142 +422,142 @@
 			};
 			name = Release;
 		};
-		D735AF661FB16E8800A674F7 /* Debug */ = {
+		D79E958F1FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CFMK9QXTCD;
-				INFOPLIST_FILE = Skylux/Info.plist;
+				INFOPLIST_FILE = Skylux_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seniorProject.Skylux;
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D735AF671FB16E8800A674F7 /* Release */ = {
+		D79E95901FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CFMK9QXTCD;
-				INFOPLIST_FILE = Skylux/Info.plist;
+				INFOPLIST_FILE = Skylux_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seniorProject.Skylux;
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		D735AF691FB16E8800A674F7 /* Debug */ = {
+		D79E95921FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CFMK9QXTCD;
-				INFOPLIST_FILE = SkyluxTests/Info.plist;
+				INFOPLIST_FILE = Skylux_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seniorProject.SkyluxTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylux.app/Skylux";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylux_iOS.app/Skylux_iOS";
 			};
 			name = Debug;
 		};
-		D735AF6A1FB16E8800A674F7 /* Release */ = {
+		D79E95931FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CFMK9QXTCD;
-				INFOPLIST_FILE = SkyluxTests/Info.plist;
+				INFOPLIST_FILE = Skylux_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seniorProject.SkyluxTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylux.app/Skylux";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylux_iOS.app/Skylux_iOS";
 			};
 			name = Release;
 		};
-		D735AF6C1FB16E8800A674F7 /* Debug */ = {
+		D79E95951FB1759F0069D5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CFMK9QXTCD;
-				INFOPLIST_FILE = SkyluxUITests/Info.plist;
+				INFOPLIST_FILE = Skylux_iOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seniorProject.SkyluxUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Skylux;
+				TEST_TARGET_NAME = Skylux_iOS;
 			};
 			name = Debug;
 		};
-		D735AF6D1FB16E8800A674F7 /* Release */ = {
+		D79E95961FB1759F0069D5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CFMK9QXTCD;
-				INFOPLIST_FILE = SkyluxUITests/Info.plist;
+				INFOPLIST_FILE = Skylux_iOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = seniorProject.SkyluxUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Skylux;
+				TEST_TARGET_NAME = Skylux_iOS;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D735AF381FB16E8600A674F7 /* Build configuration list for PBXProject "Skylux" */ = {
+		D79E95611FB1759F0069D5B7 /* Build configuration list for PBXProject "Skylux_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D735AF631FB16E8800A674F7 /* Debug */,
-				D735AF641FB16E8800A674F7 /* Release */,
+				D79E958C1FB1759F0069D5B7 /* Debug */,
+				D79E958D1FB1759F0069D5B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D735AF651FB16E8800A674F7 /* Build configuration list for PBXNativeTarget "Skylux" */ = {
+		D79E958E1FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D735AF661FB16E8800A674F7 /* Debug */,
-				D735AF671FB16E8800A674F7 /* Release */,
+				D79E958F1FB1759F0069D5B7 /* Debug */,
+				D79E95901FB1759F0069D5B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D735AF681FB16E8800A674F7 /* Build configuration list for PBXNativeTarget "SkyluxTests" */ = {
+		D79E95911FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D735AF691FB16E8800A674F7 /* Debug */,
-				D735AF6A1FB16E8800A674F7 /* Release */,
+				D79E95921FB1759F0069D5B7 /* Debug */,
+				D79E95931FB1759F0069D5B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D735AF6B1FB16E8800A674F7 /* Build configuration list for PBXNativeTarget "SkyluxUITests" */ = {
+		D79E95941FB1759F0069D5B7 /* Build configuration list for PBXNativeTarget "Skylux_iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D735AF6C1FB16E8800A674F7 /* Debug */,
-				D735AF6D1FB16E8800A674F7 /* Release */,
+				D79E95951FB1759F0069D5B7 /* Debug */,
+				D79E95961FB1759F0069D5B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D735AF351FB16E8600A674F7 /* Project object */;
+	rootObject = D79E955E1FB1759F0069D5B7 /* Project object */;
 }

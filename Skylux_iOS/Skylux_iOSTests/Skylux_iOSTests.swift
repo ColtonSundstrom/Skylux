@@ -1,15 +1,15 @@
 //
-//  SkyluxTests.swift
-//  SkyluxTests
+//  Skylux_iOSTests.swift
+//  Skylux_iOSTests
 //
 //  Created by James Green on 11/6/17.
 //  Copyright © 2017 James Green. All rights reserved.
 //
 
 import XCTest
-@testable import Skylux
+@testable import Skylux_iOS
 
-class SkyluxTests: XCTestCase {
+class Skylux_iOSTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

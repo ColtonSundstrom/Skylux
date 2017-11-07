@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Skylux.xcodeproj">
+      location = "self:Skylux_iOS.xcodeproj">
    </FileRef>
 </Workspace>

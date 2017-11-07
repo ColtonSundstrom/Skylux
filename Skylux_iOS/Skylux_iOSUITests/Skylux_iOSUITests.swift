@@ -1,6 +1,6 @@
 //
-//  SkyluxUITests.swift
-//  SkyluxUITests
+//  Skylux_iOSUITests.swift
+//  Skylux_iOSUITests
 //
 //  Created by James Green on 11/6/17.
 //  Copyright © 2017 James Green. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SkyluxUITests: XCTestCase {
+class Skylux_iOSUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

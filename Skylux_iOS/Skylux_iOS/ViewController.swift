@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Skylux
+//  Skylux_iOS
 //
 //  Created by James Green on 11/6/17.
 //  Copyright © 2017 James Green. All rights reserved.
