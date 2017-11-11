@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D709D66C1FB66A840038424B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D66B1FB66A840038424B /* StatusViewController.swift */; };
+		D709D66E1FB6849B0038424B /* skylux_v2.png in Resources */ = {isa = PBXBuildFile; fileRef = D709D66D1FB6849B0038424B /* skylux_v2.png */; };
+		D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7032B1FB5235400D7689A /* AppDelegate.swift */; };
+		D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7032D1FB5235400D7689A /* ViewController.swift */; };
+		D7D703311FB5235400D7689A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D7032F1FB5235400D7689A /* Main.storyboard */; };
+		D7D703331FB5235400D7689A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D703321FB5235400D7689A /* Assets.xcassets */; };
+		D7D703361FB5235400D7689A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D703341FB5235400D7689A /* LaunchScreen.storyboard */; };
+		D7D703411FB5235500D7689A /* Skylux_iOS_1_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D703401FB5235500D7689A /* Skylux_iOS_1_1Tests.swift */; };
+		D7D7034C1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7034B1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7D7033D1FB5235500D7689A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7D703201FB5235400D7689A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D703271FB5235400D7689A;
+			remoteInfo = Skylux_iOS_1.1;
+		};
+		D7D703481FB5235500D7689A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7D703201FB5235400D7689A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D703271FB5235400D7689A;
+			remoteInfo = Skylux_iOS_1.1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D709D66B1FB66A840038424B /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		D709D66D1FB6849B0038424B /* skylux_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skylux_v2.png; sourceTree = "<group>"; };
+		D7D703281FB5235400D7689A /* Skylux_iOS_1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylux_iOS_1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D7032B1FB5235400D7689A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7D7032D1FB5235400D7689A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7D703301FB5235400D7689A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7D703321FB5235400D7689A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7D703351FB5235400D7689A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7D703371FB5235400D7689A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D7033C1FB5235500D7689A /* Skylux_iOS_1.1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skylux_iOS_1.1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D703401FB5235500D7689A /* Skylux_iOS_1_1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skylux_iOS_1_1Tests.swift; sourceTree = "<group>"; };
+		D7D703421FB5235500D7689A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D703471FB5235500D7689A /* Skylux_iOS_1.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skylux_iOS_1.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D7034B1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skylux_iOS_1_1UITests.swift; sourceTree = "<group>"; };
+		D7D7034D1FB5235500D7689A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7D703251FB5235400D7689A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D703391FB5235500D7689A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D703441FB5235500D7689A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7D7031F1FB5235400D7689A = {
+			isa = PBXGroup;
+			children = (
+				D7D7032A1FB5235400D7689A /* Skylux_iOS_1.1 */,
+				D7D7033F1FB5235500D7689A /* Skylux_iOS_1.1Tests */,
+				D7D7034A1FB5235500D7689A /* Skylux_iOS_1.1UITests */,
+				D7D703291FB5235400D7689A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7D703291FB5235400D7689A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7D703281FB5235400D7689A /* Skylux_iOS_1.1.app */,
+				D7D7033C1FB5235500D7689A /* Skylux_iOS_1.1Tests.xctest */,
+				D7D703471FB5235500D7689A /* Skylux_iOS_1.1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7D7032A1FB5235400D7689A /* Skylux_iOS_1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				D7D7032B1FB5235400D7689A /* AppDelegate.swift */,
+				D7D7032D1FB5235400D7689A /* ViewController.swift */,
+				D709D66B1FB66A840038424B /* StatusViewController.swift */,
+				D7D7032F1FB5235400D7689A /* Main.storyboard */,
+				D709D66D1FB6849B0038424B /* skylux_v2.png */,
+				D7D703321FB5235400D7689A /* Assets.xcassets */,
+				D7D703341FB5235400D7689A /* LaunchScreen.storyboard */,
+				D7D703371FB5235400D7689A /* Info.plist */,
+			);
+			path = Skylux_iOS_1.1;
+			sourceTree = "<group>";
+		};
+		D7D7033F1FB5235500D7689A /* Skylux_iOS_1.1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D7D703401FB5235500D7689A /* Skylux_iOS_1_1Tests.swift */,
+				D7D703421FB5235500D7689A /* Info.plist */,
+			);
+			path = Skylux_iOS_1.1Tests;
+			sourceTree = "<group>";
+		};
+		D7D7034A1FB5235500D7689A /* Skylux_iOS_1.1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7D7034B1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift */,
+				D7D7034D1FB5235500D7689A /* Info.plist */,
+			);
+			path = Skylux_iOS_1.1UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7D703271FB5235400D7689A /* Skylux_iOS_1.1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D703501FB5235500D7689A /* Build configuration list for PBXNativeTarget "Skylux_iOS_1.1" */;
+			buildPhases = (
+				D7D703241FB5235400D7689A /* Sources */,
+				D7D703251FB5235400D7689A /* Frameworks */,
+				D7D703261FB5235400D7689A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skylux_iOS_1.1;
+			productName = Skylux_iOS_1.1;
+			productReference = D7D703281FB5235400D7689A /* Skylux_iOS_1.1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7D7033B1FB5235500D7689A /* Skylux_iOS_1.1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D703531FB5235500D7689A /* Build configuration list for PBXNativeTarget "Skylux_iOS_1.1Tests" */;
+			buildPhases = (
+				D7D703381FB5235500D7689A /* Sources */,
+				D7D703391FB5235500D7689A /* Frameworks */,
+				D7D7033A1FB5235500D7689A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D7033E1FB5235500D7689A /* PBXTargetDependency */,
+			);
+			name = Skylux_iOS_1.1Tests;
+			productName = Skylux_iOS_1.1Tests;
+			productReference = D7D7033C1FB5235500D7689A /* Skylux_iOS_1.1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7D703461FB5235500D7689A /* Skylux_iOS_1.1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D703561FB5235500D7689A /* Build configuration list for PBXNativeTarget "Skylux_iOS_1.1UITests" */;
+			buildPhases = (
+				D7D703431FB5235500D7689A /* Sources */,
+				D7D703441FB5235500D7689A /* Frameworks */,
+				D7D703451FB5235500D7689A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D703491FB5235500D7689A /* PBXTargetDependency */,
+			);
+			name = Skylux_iOS_1.1UITests;
+			productName = Skylux_iOS_1.1UITests;
+			productReference = D7D703471FB5235500D7689A /* Skylux_iOS_1.1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7D703201FB5235400D7689A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "James Green";
+				TargetAttributes = {
+					D7D703271FB5235400D7689A = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					D7D7033B1FB5235500D7689A = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D7D703271FB5235400D7689A;
+					};
+					D7D703461FB5235500D7689A = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D7D703271FB5235400D7689A;
+					};
+				};
+			};
+			buildConfigurationList = D7D703231FB5235400D7689A /* Build configuration list for PBXProject "Skylux_iOS_1.1" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7D7031F1FB5235400D7689A;
+			productRefGroup = D7D703291FB5235400D7689A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7D703271FB5235400D7689A /* Skylux_iOS_1.1 */,
+				D7D7033B1FB5235500D7689A /* Skylux_iOS_1.1Tests */,
+				D7D703461FB5235500D7689A /* Skylux_iOS_1.1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7D703261FB5235400D7689A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D703361FB5235400D7689A /* LaunchScreen.storyboard in Resources */,
+				D7D703331FB5235400D7689A /* Assets.xcassets in Resources */,
+				D7D703311FB5235400D7689A /* Main.storyboard in Resources */,
+				D709D66E1FB6849B0038424B /* skylux_v2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D7033A1FB5235500D7689A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D703451FB5235500D7689A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7D703241FB5235400D7689A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */,
+				D709D66C1FB66A840038424B /* StatusViewController.swift in Sources */,
+				D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D703381FB5235500D7689A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D703411FB5235500D7689A /* Skylux_iOS_1_1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D703431FB5235500D7689A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D7034C1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7D7033E1FB5235500D7689A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7D703271FB5235400D7689A /* Skylux_iOS_1.1 */;
+			targetProxy = D7D7033D1FB5235500D7689A /* PBXContainerItemProxy */;
+		};
+		D7D703491FB5235500D7689A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7D703271FB5235400D7689A /* Skylux_iOS_1.1 */;
+			targetProxy = D7D703481FB5235500D7689A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7D7032F1FB5235400D7689A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7D703301FB5235400D7689A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7D703341FB5235400D7689A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7D703351FB5235400D7689A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7D7034E1FB5235500D7689A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7D7034F1FB5235500D7689A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7D703511FB5235500D7689A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFMK9QXTCD;
+				INFOPLIST_FILE = Skylux_iOS_1.1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS-1-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7D703521FB5235500D7689A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFMK9QXTCD;
+				INFOPLIST_FILE = Skylux_iOS_1.1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS-1-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7D703541FB5235500D7689A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFMK9QXTCD;
+				INFOPLIST_FILE = Skylux_iOS_1.1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS-1-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylux_iOS_1.1.app/Skylux_iOS_1.1";
+			};
+			name = Debug;
+		};
+		D7D703551FB5235500D7689A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFMK9QXTCD;
+				INFOPLIST_FILE = Skylux_iOS_1.1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS-1-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skylux_iOS_1.1.app/Skylux_iOS_1.1";
+			};
+			name = Release;
+		};
+		D7D703571FB5235500D7689A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFMK9QXTCD;
+				INFOPLIST_FILE = Skylux_iOS_1.1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS-1-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Skylux_iOS_1.1;
+			};
+			name = Debug;
+		};
+		D7D703581FB5235500D7689A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFMK9QXTCD;
+				INFOPLIST_FILE = Skylux_iOS_1.1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "seniorProject.Skylux-iOS-1-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Skylux_iOS_1.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7D703231FB5235400D7689A /* Build configuration list for PBXProject "Skylux_iOS_1.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D7034E1FB5235500D7689A /* Debug */,
+				D7D7034F1FB5235500D7689A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D703501FB5235500D7689A /* Build configuration list for PBXNativeTarget "Skylux_iOS_1.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D703511FB5235500D7689A /* Debug */,
+				D7D703521FB5235500D7689A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D703531FB5235500D7689A /* Build configuration list for PBXNativeTarget "Skylux_iOS_1.1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D703541FB5235500D7689A /* Debug */,
+				D7D703551FB5235500D7689A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D703561FB5235500D7689A /* Build configuration list for PBXNativeTarget "Skylux_iOS_1.1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D703571FB5235500D7689A /* Debug */,
+				D7D703581FB5235500D7689A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7D703201FB5235400D7689A /* Project object */;
+}
