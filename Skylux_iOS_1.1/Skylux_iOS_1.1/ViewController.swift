@@ -12,17 +12,20 @@ import UIKit
 var jsonResponse : [String:AnyObject]?
 
 class ViewController: UIViewController {
-    //TODO: Replace with Colton's API
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var cLeading: NSLayoutConstraint!
     @IBOutlet weak var cTrailing: NSLayoutConstraint!
     var isMenuVisible = false
+    var deviceNumber = 2
     
     @IBAction func onOpenTapped(_ sender: Any) {
         let parameters = ["command": "open", "id": "skylux-ios"]
-        
-        guard let url = URL(string:"http://coltonsundstrom.net:5000/skylux/api/open/2") else {return}
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/status/"
+        urlString.append(String(describing: deviceNumber))
+        print("*****")
+        print(urlString)
+        guard let url = URL(string:urlString) else {return}
         print("making request")
         var request = URLRequest(url: url) //TODO update cache policy
         request.httpMethod = "PUT" //lets url session know we're posting
@@ -43,9 +46,12 @@ class ViewController: UIViewController {
             }.resume()
     }
     @IBAction func onCloseTapped(_ sender: Any) {
-        let parameters = ["command": "open", "id": "skylux-ios"]
-        
-        guard let url = URL(string:"http://coltonsundstrom.net:5000/skylux/api/close/2") else {return}
+        let parameters = ["command": "close", "id": "skylux-ios"]
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/status/"
+        urlString.append(String(describing: deviceNumber))
+        print("*****")
+        print(urlString)
+        guard let url = URL(string:urlString) else {return}
         print("making request")
         var request = URLRequest(url: url) //TODO update cache policy
         request.httpMethod = "PUT" //lets url session know we're posting
