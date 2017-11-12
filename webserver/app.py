@@ -127,7 +127,7 @@ def reboot():
    print("Rebooting!")
    os.system("sudo reboot")
 
-#Obtain Nest Info
+#Obtain Nest Info-sss
 @app.route("/addPin", methods=['POST'])
 def addPin():
     print(request.form['authpin'])

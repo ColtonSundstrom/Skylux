@@ -96,6 +96,7 @@ class poller:
             fileno = target.fileno()
         if self.use_poll:
             self.poller.unregister(fileno)
+
         del(self.targets[fileno])
 
     def poll(self, timeout = 0):
@@ -401,7 +402,7 @@ class rest_api_handler(object):
         Logger = logger.Logger("log.txt")
 
     def on(self):
-        #r = requests.get(self.on_cmd)
+        # r = requests.get(self.on_cmd)
         status = Logger.readLog()
 
         if (status < 15):
@@ -422,7 +423,7 @@ class rest_api_handler(object):
 
 
     def off(self):
-        #r = requests.get(self.off_cmd)
+        # r = requests.get(self.off_cmd)
         status = Logger.readLog()
 
         if (status >= 5):
