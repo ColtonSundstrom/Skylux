@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <view opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXw-u4-9rt">
-                                <rect key="frame" x="179" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="2" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" image="skylux_v2.png" translatesAutoresizingMaskIntoConstraints="NO" id="alM-7V-Rsc">
                                         <rect key="frame" x="67" y="67" width="240" height="79"/>

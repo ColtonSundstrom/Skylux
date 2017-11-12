@@ -20,15 +20,15 @@ class ViewController: UIViewController {
     var deviceNumber = 2
     
     @IBAction func onOpenTapped(_ sender: Any) {
-        let parameters = ["command": "open", "id": "skylux-ios"]
-        var urlString = "http://coltonsundstrom.net:5000/skylux/api/status/"
+        let parameters = ["command": "ON"]
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
         urlString.append(String(describing: deviceNumber))
         print("*****")
         print(urlString)
         guard let url = URL(string:urlString) else {return}
         print("making request")
         var request = URLRequest(url: url) //TODO update cache policy
-        request.httpMethod = "PUT" //lets url session know we're posting
+        request.httpMethod = "POST" //lets url session know we're posting
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let body = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {return}
         request.httpBody = body
@@ -37,24 +37,25 @@ class ViewController: UIViewController {
             if let response = response{ print(response)}
             if let data = data{
                 do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    let json = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments)
                     print(json)
                 }catch{
+                    print("there was an error")
                     print(error)
                 }
             }
             }.resume()
     }
     @IBAction func onCloseTapped(_ sender: Any) {
-        let parameters = ["command": "close", "id": "skylux-ios"]
-        var urlString = "http://coltonsundstrom.net:5000/skylux/api/status/"
+        let parameters = ["command": "OFF"]
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
         urlString.append(String(describing: deviceNumber))
         print("*****")
         print(urlString)
         guard let url = URL(string:urlString) else {return}
         print("making request")
         var request = URLRequest(url: url) //TODO update cache policy
-        request.httpMethod = "PUT" //lets url session know we're posting
+        request.httpMethod = "POST" //lets url session know we're posting
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let body = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {return}
         request.httpBody = body
@@ -163,6 +164,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
 
 }
