@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		D709D66C1FB66A840038424B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D66B1FB66A840038424B /* StatusViewController.swift */; };
 		D709D66E1FB6849B0038424B /* skylux_v2.png in Resources */ = {isa = PBXBuildFile; fileRef = D709D66D1FB6849B0038424B /* skylux_v2.png */; };
+		D709D6701FB7CD820038424B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D66F1FB7CD820038424B /* HistoryViewController.swift */; };
+		D709D6721FB7D0590038424B /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D6711FB7D0590038424B /* HelpTableViewController.swift */; };
+		D709D6741FB7DD750038424B /* helpQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D6731FB7DD750038424B /* helpQuestion.swift */; };
+		D709D6761FB7DF0D0038424B /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D6751FB7DF0D0038424B /* HelpTableViewCell.swift */; };
+		D709D6781FB7E3A80038424B /* HelpDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D6771FB7E3A80038424B /* HelpDetailViewController.swift */; };
 		D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7032B1FB5235400D7689A /* AppDelegate.swift */; };
 		D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7032D1FB5235400D7689A /* ViewController.swift */; };
 		D7D703311FB5235400D7689A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D7032F1FB5235400D7689A /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 /* Begin PBXFileReference section */
 		D709D66B1FB66A840038424B /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		D709D66D1FB6849B0038424B /* skylux_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skylux_v2.png; sourceTree = "<group>"; };
+		D709D66F1FB7CD820038424B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D709D6711FB7D0590038424B /* HelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewController.swift; sourceTree = "<group>"; };
+		D709D6731FB7DD750038424B /* helpQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpQuestion.swift; sourceTree = "<group>"; };
+		D709D6751FB7DF0D0038424B /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
+		D709D6771FB7E3A80038424B /* HelpDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailViewController.swift; sourceTree = "<group>"; };
 		D7D703281FB5235400D7689A /* Skylux_iOS_1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylux_iOS_1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D7032B1FB5235400D7689A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7D7032D1FB5235400D7689A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +88,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D709D6791FB7E8490038424B /* helpQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				D709D66F1FB7CD820038424B /* HistoryViewController.swift */,
+				D709D6751FB7DF0D0038424B /* HelpTableViewCell.swift */,
+				D709D6711FB7D0590038424B /* HelpTableViewController.swift */,
+				D709D6771FB7E3A80038424B /* HelpDetailViewController.swift */,
+				D709D6731FB7DD750038424B /* helpQuestion.swift */,
+			);
+			path = helpQuestions;
+			sourceTree = "<group>";
+		};
 		D7D7031F1FB5235400D7689A = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +127,7 @@
 				D7D7032D1FB5235400D7689A /* ViewController.swift */,
 				D709D66B1FB66A840038424B /* StatusViewController.swift */,
 				D7D7032F1FB5235400D7689A /* Main.storyboard */,
+				D709D6791FB7E8490038424B /* helpQuestions */,
 				D709D66D1FB6849B0038424B /* skylux_v2.png */,
 				D7D703321FB5235400D7689A /* Assets.xcassets */,
 				D7D703341FB5235400D7689A /* LaunchScreen.storyboard */,
@@ -269,7 +292,12 @@
 			files = (
 				D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */,
 				D709D66C1FB66A840038424B /* StatusViewController.swift in Sources */,
+				D709D6761FB7DF0D0038424B /* HelpTableViewCell.swift in Sources */,
+				D709D6721FB7D0590038424B /* HelpTableViewController.swift in Sources */,
+				D709D6781FB7E3A80038424B /* HelpDetailViewController.swift in Sources */,
 				D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */,
+				D709D6741FB7DD750038424B /* helpQuestion.swift in Sources */,
+				D709D6701FB7CD820038424B /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

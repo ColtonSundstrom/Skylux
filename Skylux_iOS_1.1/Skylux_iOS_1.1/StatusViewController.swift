@@ -9,6 +9,8 @@
 import UIKit
 
 class StatusViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
     
     var jsonResponse : [String:AnyObject]?
     override func viewDidLoad() {
@@ -17,19 +19,36 @@ class StatusViewController: UIViewController {
         // Do any additional setup after loading the view.
        // let skylightStatus = (jsonResponse!["Skylight Status"] as? [[String: Any]])!
         print(jsonResponse!)
-        //for (key,value) in jsonResponse! {
-        //    if value is [String:AnyObject] {
-        //        print("\(key) is a Dictionary")
-        //    }
-        //    else if value is [AnyObject] {
-        //        print("\(key) is an Array")
-        //    }
-        //    else {
-        //        print(type(of: value))
-        //    }
-        //}
+        
+        for (key,value) in jsonResponse! {
+            if value is [String:AnyObject] {
+                print("\(key) is a Dictionary")
+            }
+            else if value is [AnyObject] {
+                print("\(key) is an Array")
+            }
+            else {
+                print(type(of: value))
+            }
+        }
+        let skylightStatus = jsonResponse?.popFirst()
+        let title = skylightStatus?.key
+        var body  = (skylightStatus?.value as! [Any])
+        print(body)
+        
+        titleLabel.text = title
+        let statusReport = body.popLast()! as! Int
+        print(statusReport)
+        if(statusReport > 0){
+            bodyLabel.text = "Open"
+        }
+        else{
+            bodyLabel.text = "Close"
+        }
+        
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
