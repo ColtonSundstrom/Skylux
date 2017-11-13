@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Skylux_iOS_1.1/StatusViewController.swift"
-            timestampString = "532159224.890393"
+            filePath = "Skylux_iOS_1.1/ViewController.swift"
+            timestampString = "532232173.06359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "speechEngine()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

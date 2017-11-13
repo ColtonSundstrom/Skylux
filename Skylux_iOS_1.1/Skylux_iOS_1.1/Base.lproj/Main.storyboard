@@ -91,6 +91,22 @@
                                             <action selector="onOpenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDd-11-wMc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4K-yB-cNl">
+                                        <rect key="frame" x="129" y="423" width="117" height="131"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Voice" image="mic.png" backgroundImage="mic.png"/>
+                                        <connections>
+                                            <action selector="onMicrophoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXN-ZA-ocf"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdR-KW-Q54">
+                                        <rect key="frame" x="164" y="359" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Halt"/>
+                                        <connections>
+                                            <action selector="stopRecordingTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCX-mP-l38"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.86678270725388606" green="0.86678270725388606" blue="0.86678270725388606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -120,6 +136,8 @@
                         <outlet property="cLeading" destination="iPz-hI-MwO" id="A5o-GR-bUY"/>
                         <outlet property="cTrailing" destination="RUe-mN-ciN" id="G3r-gp-23L"/>
                         <outlet property="menuButton" destination="8qL-Ko-ut0" id="Jil-IA-zK9"/>
+                        <outlet property="micButton" destination="I4K-yB-cNl" id="7pN-wr-4Eb"/>
+                        <outlet property="stopRecButton" destination="WdR-KW-Q54" id="SA1-Fk-E1D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -254,6 +272,7 @@
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.68807465459973582" green="0.87269972654447359" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Xue-Z0-rRK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Options" id="BjW-Ns-vnn"/>
                 </viewController>
@@ -349,6 +368,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mic.png" width="409" height="508"/>
         <image name="skylux_v2.png" width="1515" height="387"/>
     </resources>
 </document>

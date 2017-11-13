@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-class StatusViewController: UIViewController {
+class StatusViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     
@@ -18,6 +19,9 @@ class StatusViewController: UIViewController {
 
         // Do any additional setup after loading the view.
        // let skylightStatus = (jsonResponse!["Skylight Status"] as? [[String: Any]])!
+        if jsonResponse == nil{
+            return
+        }
         print(jsonResponse!)
         
         for (key,value) in jsonResponse! {
@@ -45,10 +49,9 @@ class StatusViewController: UIViewController {
         else{
             bodyLabel.text = "Close"
         }
-        
     }
     
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

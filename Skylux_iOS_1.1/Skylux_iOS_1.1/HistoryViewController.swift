@@ -2,23 +2,18 @@
 //  HistoryViewController.swift
 //  Skylux_iOS_1.1
 //
-//  Created by James Green on 11/11/17.
+//  Created by James Green on 11/12/17.
 //  Copyright © 2017 James Green. All rights reserved.
 //
 
 import UIKit
-import MapKit
 
-class HistoryViewController: UIViewController, CLLocationManagerDelegate {
+class HistoryViewController: UIViewController {
 
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
