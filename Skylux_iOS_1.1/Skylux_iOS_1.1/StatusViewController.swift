@@ -14,41 +14,33 @@ class StatusViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var bodyLabel: UILabel!
     
     var jsonResponse : [String:AnyObject]?
+    var jsonGetResponse: (Bool, AnyObject)?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(jsonGetResponse?.1)
+        if let responseArray = jsonGetResponse?.1{
+            print(responseArray)
+        }
+        
         // Do any additional setup after loading the view.
        // let skylightStatus = (jsonResponse!["Skylight Status"] as? [[String: Any]])!
-        if jsonResponse == nil{
-            return
-        }
-        print(jsonResponse!)
         
-        for (key,value) in jsonResponse! {
-            if value is [String:AnyObject] {
-                print("\(key) is a Dictionary")
-            }
-            else if value is [AnyObject] {
-                print("\(key) is an Array")
-            }
-            else {
-                print(type(of: value))
-            }
-        }
-        let skylightStatus = jsonResponse?.popFirst()
-        let title = skylightStatus?.key
-        var body  = (skylightStatus?.value as! [Any])
-        print(body)
+
+        //let skylightStatus = jsonResponse?.popFirst()
+        //let title = skylightStatus?.key
+        //var body  = (skylightStatus?.value as! [Any])
+        //print(body)
         
-        titleLabel.text = title
-        let statusReport = body.popLast()! as! Int
-        print(statusReport)
-        if(statusReport > 0){
-            bodyLabel.text = "Open"
-        }
-        else{
-            bodyLabel.text = "Close"
-        }
+        //titleLabel.text = title
+        //let statusReport = body.popLast()! as! Int
+        //print(statusReport)
+        //if(statusReport > 0){
+        //    bodyLabel.text = "Open"
+       // }
+       // else{
+       //     bodyLabel.text = "Close"
+       // }
     }
     
 

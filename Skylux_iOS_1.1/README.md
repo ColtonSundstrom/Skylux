@@ -15,3 +15,22 @@ As of now, I am able to create POST/GET requests made to coltonsundstrom.net, wh
 Currently, the data produced will show up in the console, with minimal on-screen feedback.
 The GET requests can be seen upon startup, which indicates the status of the Skylight.
 The POST requests can be seen when the user taps OPEN/CLOSE, which will be met with a successful status code and a post result.
+
+
+master schedule *11-14-17*
+    -cloud drop
+        -getting schedule info from cloud drop contoller (master)
+        - scheduling only in one place (master)
+        -app mirroring what is in device
+        - be able to have commands that app can send via server
+        - vice versa: LAN direct commands when not on network
+        - controller doesnt know time/date data
+            -pings server to determine time
+                -in smart device
+                    -if powered, you can use system clock and occasionally check
+                    - ping every once in a while
+            -scheduling in phone itself (not robust)
+            -move to operator for full independent build
+-get feedback that server recieved POST/GET RTT Feedback~
+- use QR code for setup to obtain device ID information
+    -voice command makes more sense from control setup

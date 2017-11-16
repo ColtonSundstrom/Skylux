@@ -46,7 +46,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         // Indicate that the audio source is finished and no more audio will be appended
         micButton.isEnabled = true
         stopRecButton.isHidden = true
-        
     }
     
     
@@ -163,58 +162,38 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         
     }
     
-    @IBAction func onGetTapped(_ sender: Any) {
+    let apiClient = APIClient(endpointURL: "http://coltonsundstrom.net:5000/skylux/api/status/2")
 
-    }
-    
-    @IBAction func onPostTapped(_ sender: Any) {
-        
-        let parameters = ["username": "@greenjames", "tweet": "hello world"]
-        
-        guard let url = URL(string:"https://jsonplaceholder.typicode.com/posts/1") else {return}
-        var request = URLRequest(url: url) //TODO update cache policy
-        request.httpMethod = "PUT" //lets url session know we're posting
-        guard let body = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {return}
-        request.httpBody = body
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
-            if let response = response{ print(response)}
-            if let data = data{
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-                }catch{
-                    print(error)
-                }
-            }
-        }.resume()
-        
-    }
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        guard let url = URL(string: "http://coltonsundstrom.net:5000/skylux/api/status/2") else {return}
-        let session = URLSession(configuration: URLSessionConfiguration.default)
+        DispatchQueue.global(qos: .userInitiated).async {
+            // Download file or perform expensive task
+            self.apiClient.get()
+            DispatchQueue.main.async {
+                super.viewDidLoad()
+                // Update the UI
+            }
+        }
+        //guard let url = URL(string: "http://coltonsundstrom.net:5000/skylux/api/status/2") else {return}
+        //let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let request = URLRequest(url: url)
+        //let request = URLRequest(url: url)
         
-        let task: URLSessionDataTask = session.dataTask(with: request) { (receivedData, response, error) -> Void in
+        //let task: URLSessionDataTask = session.dataTask(with: request) { (receivedData, response, error) -> Void in
             
-            if let data = receivedData {
-                print("***")
+          //  if let data = receivedData {
+                //print("***")
                 // uncomment to print raw response
-                                let rawDataString = String(data: data, encoding: String.Encoding.utf8)
-                                print(rawDataString!)
+                //                let rawDataString = String(data: data, encoding: String.Encoding.utf8)
+                 //               print(rawDataString!)
                 
-                var jsonResponse : [String:AnyObject]?
+            //    var jsonResponse : [String:AnyObject]?
                 
-                do {
-                    jsonResponse = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
-                }
-                catch {
-                    print("Caught exception")
-                }
+              //  do {
+                //    jsonResponse = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
+                //}
+                //catch {
+                  //  print("Caught exception")
+                //}
                 
                 // print dictionary after serialization
                 //print(jsonResponse!)
@@ -223,10 +202,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 
                 //print("\nDrill down of JSON structure:")
                 //self.jsonDrillDown(json: jsonResponse!, indent: "")
-            }
-        }
+            //}
+        //}
         
-        task.resume()
+        //task.resume()
         //print("making session")
         //let session = URLSession.shared
         //session.dataTask(with: url) { (data, url_response, error) in
@@ -252,14 +231,15 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
          //   }
          //   }.resume()
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let jsonResponse = apiClient.completion
         if(segue.identifier == "statusSegue"){
             print("Is the response empty now???")
-            print(jsonResponse?.isEmpty as Any)
             print("now gonna send it to the status screen")
             let destVC = segue.destination as! StatusViewController
-            destVC.jsonResponse = jsonResponse
+            destVC.jsonGetResponse = jsonResponse as! (Bool, AnyObject)
             
         }
     }
