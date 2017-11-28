@@ -12,9 +12,12 @@ import Speech
 
 //made global so other functions can access
 var jsonResponse : [String:AnyObject]?
+var authToken : String?
 
 class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
+    
+    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var micButton: UIButton!
     
     @IBOutlet weak var stopRecButton: UIButton!
@@ -48,8 +51,25 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         stopRecButton.isHidden = true
     }
     
+    func busyLock(){
+        print("locked!")
+        myActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        myActivityIndicator.color = UIColor.gray
+        myActivityIndicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.myActivityIndicator.stopAnimating()
+        }
+    }
+    
+    func busyUnlock(){
+        print("unlocked!")
+        myActivityIndicator.stopAnimating()
+        //myActivityView.stopAnimating()
+    }
+    
     
     func speechEngine() throws{
+        var resultString = ""
         let node = audioEngine.inputNode
         let format = node.outputFormat(forBus: 0)
         node.removeTap(onBus: 0)
@@ -71,21 +91,25 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         if !tempListener.isAvailable {
             return print("mic not available")
         }
-        do{
-        try task = speechRecognizer?.recognitionTask(with: request, resultHandler: { (res, err) in
+        task = speechRecognizer?.recognitionTask(with: request, resultHandler: { (res, err) in
             if let res = res{
                 let whatTheySaid = res.bestTranscription.formattedString
                 print(whatTheySaid)
+                resultString.append(whatTheySaid)
+                if whatTheySaid.contains("open"){
+                    self.stopRecordingTapped(AnyClass.self)
+                    self.onOpenTapped(AnyClass.self)
+                    print("open")
+                }
             } else if let err = err{
                 print("@@@@@@")
                 print(err)
             }
         })
-        } catch {
-            audioEngine.stop()
-        }
     }
+    
     @IBAction func onOpenTapped(_ sender: Any) {
+        busyLock()
         let parameters = ["command": "ON"]
         var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
         urlString.append(String(describing: deviceNumber))
@@ -105,14 +129,19 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments)
                     print(json)
+
                 }catch{
                     print("there was an error")
                     print(error)
                 }
             }
+            self.busyUnlock()
+
             }.resume()
+        
     }
     @IBAction func onCloseTapped(_ sender: Any) {
+        busyLock()
         let parameters = ["command": "OFF"]
         var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
         urlString.append(String(describing: deviceNumber))
@@ -132,11 +161,15 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
+
                 }catch{
                     print(error)
                 }
             }
+
             }.resume()
+        
+        
     }
     
     @IBAction func onMenuTapped(_ sender: Any) {
@@ -165,71 +198,20 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     let apiClient = APIClient(endpointURL: "http://coltonsundstrom.net:5000/skylux/api/status/2")
 
     override func viewDidLoad() {
+        if authToken == nil{
+            performSegue(withIdentifier: "loginSegue", sender: Any?.self)
+        
+        };
         DispatchQueue.global(qos: .userInitiated).async {
             // Download file or perform expensive task
+            self.busyLock()
             self.apiClient.get()
+            self.busyUnlock()
             DispatchQueue.main.async {
                 super.viewDidLoad()
                 // Update the UI
             }
         }
-        //guard let url = URL(string: "http://coltonsundstrom.net:5000/skylux/api/status/2") else {return}
-        //let session = URLSession(configuration: URLSessionConfiguration.default)
-        
-        //let request = URLRequest(url: url)
-        
-        //let task: URLSessionDataTask = session.dataTask(with: request) { (receivedData, response, error) -> Void in
-            
-          //  if let data = receivedData {
-                //print("***")
-                // uncomment to print raw response
-                //                let rawDataString = String(data: data, encoding: String.Encoding.utf8)
-                 //               print(rawDataString!)
-                
-            //    var jsonResponse : [String:AnyObject]?
-                
-              //  do {
-                //    jsonResponse = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
-                //}
-                //catch {
-                  //  print("Caught exception")
-                //}
-                
-                // print dictionary after serialization
-                //print(jsonResponse!)
-                
-                // check high-level keys for collections
-                
-                //print("\nDrill down of JSON structure:")
-                //self.jsonDrillDown(json: jsonResponse!, indent: "")
-            //}
-        //}
-        
-        //task.resume()
-        //print("making session")
-        //let session = URLSession.shared
-        //session.dataTask(with: url) { (data, url_response, error) in
-        //    if let response = url_response{
-        //        print("response is: ")
-        //        print(response)
-        //        print("end response")
-        //    }
-        //
-        //    if let data = data{
-        //        print(data)
-        //        do{
-        //            print("json response is: ")
-        //            jsonResponse = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
-        //            print(jsonResponse)
-        //            print("end json")
-        //            print("Is the response empty now???")
-        //        } catch{
-        //            print("error is")
-         //           print(error)
-         //           print("end error")
-         //       }
-         //   }
-         //   }.resume()
     }
 
     

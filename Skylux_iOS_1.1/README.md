@@ -34,3 +34,34 @@ master schedule *11-14-17*
 -get feedback that server recieved POST/GET RTT Feedback~
 - use QR code for setup to obtain device ID information
     -voice command makes more sense from control setup
+    
+    
+    11-28-17
+    
+    coltonsundstrom
+        server support
+        transition for next quarter
+        
+setup?
+
+server in middle
+    sevrer is static always known location
+    POST server side
+        TLS auth (token based)
+        authenticate then get status
+        username and password in plaintext
+        then get token for future authentication
+schedule
+    proc a task when get POST for scheduling
+    send MQTT comnmands
+    point to point stretch goal
+
+QR code / Setup
+    GPS tag when setup
+    QR code has ID number
+    Pin on map
+
+user feedback
+    watchdog timer
+    timeout?
+    status update

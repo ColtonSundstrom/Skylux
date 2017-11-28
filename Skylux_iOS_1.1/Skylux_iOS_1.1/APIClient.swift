@@ -14,9 +14,13 @@ class APIClient{
     var request: URLRequest
     var task: URLSessionDataTask
     var finished: Bool
+    //let VC = ViewController()
+
     var busy: Bool{
         didSet{
-            print("API CLIENT BUSY STATUS: \(busy)")
+            //VC.busyLock()
+            //print("API CLIENT BUSY STATUS: \(busy)")
+            
         }
     }
     var completion: (Bool, AnyObject?) {
@@ -36,6 +40,7 @@ class APIClient{
         self.completion = (false, nil)
         self.finished = false
         self.busy = false
+        //VC.busyUnlock()
         self.task = session.dataTask(with: request) { (data, response, error) -> Void in
             if let data = data {
                 let response = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
@@ -68,6 +73,7 @@ class APIClient{
             wait()
         } while (self.finished == false)
         busy = false
+       // VC.busyUnlock()
     }
 
     

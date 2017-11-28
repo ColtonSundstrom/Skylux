@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/jamesgreen/Documents/GitHub/Skylux/Skylux_iOS_1.1/Skylux_iOS_1.1/noun_862194_cc.png">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
