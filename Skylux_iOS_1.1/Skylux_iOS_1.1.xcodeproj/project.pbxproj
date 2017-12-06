@@ -15,6 +15,9 @@
 		D709D6761FB7DF0D0038424B /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D6751FB7DF0D0038424B /* HelpTableViewCell.swift */; };
 		D709D6781FB7E3A80038424B /* HelpDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709D6771FB7E3A80038424B /* HelpDetailViewController.swift */; };
 		D709D67F1FB918F10038424B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D709D67E1FB918F10038424B /* README.md */; };
+		D7195F1C1FD63B6700662E5C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7195F1B1FD63B6700662E5C /* RegisterViewController.swift */; };
+		D7195F1E1FD63CC400662E5C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7195F1D1FD63CC400662E5C /* EntryViewController.swift */; };
+		D7195F201FD68AF500662E5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7195F1F1FD68AF500662E5C /* User.swift */; };
 		D7B69F841FCD1CAE008EE88B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B69F831FCD1CAE008EE88B /* OptionsViewController.swift */; };
 		D7B69F861FCE0D6D008EE88B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B69F851FCE0D6D008EE88B /* LoginViewController.swift */; };
 		D7BEA2381FBC07200073B89B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEA2371FBC07200073B89B /* APIClient.swift */; };
@@ -54,6 +57,9 @@
 		D709D6771FB7E3A80038424B /* HelpDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailViewController.swift; sourceTree = "<group>"; };
 		D709D67C1FB918A30038424B /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mic.png; path = /Users/jamesgreen/Documents/GitHub/Skylux/Skylux_iOS_1.1/Skylux_iOS_1.1/mic.png; sourceTree = "<absolute>"; };
 		D709D67E1FB918F10038424B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D7195F1B1FD63B6700662E5C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D7195F1D1FD63CC400662E5C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		D7195F1F1FD68AF500662E5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D7B69F831FCD1CAE008EE88B /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		D7B69F851FCE0D6D008EE88B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7BEA2371FBC07200073B89B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				D7D7032F1FB5235400D7689A /* Main.storyboard */,
+				D7195F1F1FD68AF500662E5C /* User.swift */,
+				D7195F1D1FD63CC400662E5C /* EntryViewController.swift */,
+				D7195F1B1FD63B6700662E5C /* RegisterViewController.swift */,
 				D7B69F851FCE0D6D008EE88B /* LoginViewController.swift */,
 				D7D7032B1FB5235400D7689A /* AppDelegate.swift */,
 				D7D7032D1FB5235400D7689A /* ViewController.swift */,
@@ -308,7 +317,10 @@
 				D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */,
 				D709D66C1FB66A840038424B /* StatusViewController.swift in Sources */,
 				D709D6761FB7DF0D0038424B /* HelpTableViewCell.swift in Sources */,
+				D7195F1C1FD63B6700662E5C /* RegisterViewController.swift in Sources */,
 				D709D6721FB7D0590038424B /* HelpTableViewController.swift in Sources */,
+				D7195F1E1FD63CC400662E5C /* EntryViewController.swift in Sources */,
+				D7195F201FD68AF500662E5C /* User.swift in Sources */,
 				D709D6781FB7E3A80038424B /* HelpDetailViewController.swift in Sources */,
 				D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */,
 				D709D6741FB7DD750038424B /* helpQuestion.swift in Sources */,

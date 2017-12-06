@@ -12,8 +12,28 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     @IBAction func onLoginPress(_ sender: Any) {
-        print("Username is: \(usernameField.text) Password is: \(passwordField.text)")
+        if let username = usernameField.text{
+            if let password = passwordField.text{
+                //let storedEmail = UserDefaults.standard.string(forKey: username)
+                //let storedPassword = UserDefaults.standard.string(forKey: "userPass")
+                if let storedUserPassword = UserDefaults.standard.string(forKey: username){
+                    print("login success!")
+                    self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+                }
+            }
+
+        }
+        
+        //print("Username is: \(usernameField.text) Password is: \(passwordField.text)")
+        //let loginString = NSString(format: "%@:%@", (usernameField.text)!, (passwordField.text)!)
+        //let loginData : Data = loginString.data(using: String.Encoding.utf8.rawValue)!
+        //let base64login = loginData.base64EncodedString()
+        
+        //let url = URL(string: <#T##String#>)
+        
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,7 +16,7 @@ class OptionsViewController: UIViewController {
         let timeInfo = datePick.date.timeIntervalSinceReferenceDate
         print(timeInfo.description)
         let parameters = ["time": String(describing: timeInfo), "command": "ON"]
-        var urlString = "http://coltonsundstrom.net:5000/skylux/api/schedule/2"
+        let urlString = "http://coltonsundstrom.net:5000/skylux/api/schedule/2"
         print("*****")
         print(urlString)
         guard let url = URL(string:urlString) else {return}

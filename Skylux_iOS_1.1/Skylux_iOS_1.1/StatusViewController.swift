@@ -18,7 +18,7 @@ class StatusViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(jsonGetResponse?.1)
+        //print(jsonGetResponse?.1)
         if let responseArray = jsonGetResponse?.1{
             print(responseArray)
         }

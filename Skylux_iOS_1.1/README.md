@@ -65,3 +65,27 @@ user feedback
     watchdog timer
     timeout?
     status update
+    
+    12-5-17
+    two tables
+    devices ->statuses
+    users   -> register (POST) -> macaddress password user
+            -> login    (POST) -> user password
+    
+    QR Code -> not randomly made up
+    MQTT -> sends topic (Devices)
+       anyone posts server listens
+       processes it by putting it into database
+       take mac address for physical device
+            embed macadress into qr code
+            address already exists
+            
+    new flow
+    
+    app launch -> register w/ camera -> login
+    
+    next group -> encrypt login
+        public/private key
+        get key -> GET server sends public key 
+        
+    

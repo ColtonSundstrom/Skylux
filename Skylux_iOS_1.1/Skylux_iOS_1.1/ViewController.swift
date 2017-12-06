@@ -21,7 +21,8 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var micButton: UIButton!
     
     @IBOutlet weak var stopRecButton: UIButton!
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    //@IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var cLeading: NSLayoutConstraint!
     @IBOutlet weak var cTrailing: NSLayoutConstraint!
     var isMenuVisible = false
@@ -109,6 +110,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     @IBAction func onOpenTapped(_ sender: Any) {
+        print("open!")
         busyLock()
         let parameters = ["command": "ON"]
         var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
@@ -177,11 +179,11 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             cLeading.constant = 150
             cTrailing.constant = -150
             isMenuVisible = true
-            menuButton.title = "Close Menu"
+            menuButton.setTitle("Close", for: .normal)
             
         }
         else{
-            menuButton.title = "Menu"
+            menuButton.setTitle("Menu", for: .normal)
             cLeading.constant = 0
             cTrailing.constant = 0
             isMenuVisible = false
@@ -221,7 +223,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             print("Is the response empty now???")
             print("now gonna send it to the status screen")
             let destVC = segue.destination as! StatusViewController
-            destVC.jsonGetResponse = jsonResponse as! (Bool, AnyObject)
+            destVC.jsonGetResponse = (jsonResponse as! (Bool, AnyObject))
             
         }
     }
