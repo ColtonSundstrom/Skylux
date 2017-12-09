@@ -1,6 +1,44 @@
 
 Microphone Icon by Aya Sofya from Noun Project
 
+
+App Features:
+
+PROFESSOR SCOVIL READ HERE:
+
+SETUP PROCESS:
+
+    1) Ensure you have Paho-MQTT installed. This can be done by running
+            pip install Paho-MQTT
+    2) Start up DummyDevice.py. This allows you to see the open/close commands being sent via the server.
+    3) Register with all required information. The MAC for the test device is 11:22:33:44:55:66. This is embedded in SKYLUX_MAC.png for the QR code reading.
+    4) Log in with your provided information from step 4.
+    5) Issue commands and see them being received by the test device in DummyDevice.py
+    
+THINGS TO NOTE:
+    1) Scheduling isn't currently implemented server-side. You will get error code 500 if you submit a schedule, but the server does store the information.
+    2) If the commands aren't working, then you must re login. Simply open menu->login.
+    3) Location services and camera access are required to run this application. Ensure you have the proper permissions enabled.
+    4) To ensure everything is properly laid out, run simulation on a device iPhone 6s or later.
+
+QR CODE READER
+
+The QR code reader is used under the register skylight screen. It is assumed that the QR code will contain a MAC address with 6 tuples separated by colons. This information is then sent to the server upon registration.
+
+
+LOGIN/REGISTRATION
+
+The logn/registration process isnt anything too revolutionary. When registering, the user sends a username and password to the server via an API POST to Colton Sundstrom's (my CPE 350/450 Partner) MQTT server. This is relatively similar to the firebase/Google auth process, in that the username password combo is saved on the server along with the associated MAC for the machine they are registered to.
+
+Logging in involves sending the user name and password, and if correct, the server will reply with an authentication token. This alows for more secure communication and allows for sending commands to the server without having to provide too much information. Whenever a command is made, an auth token is sent with it so the server knows exactly who sent what.
+
+MICROPHONE SPEECH ENGINE
+
+Tapping the microphone button begins the Skylux listening process. It listens for commands then performs segues based on those commands. Commands must be prefaced with the word "Skylight". I.e. "Skylight open", "Skylight help", etc.. The microphone can open all pages in the application and issue commands.
+
+
+MILESTONE 3
+
 MAJOR DEVELOPMENT UPDATE:
 
 In milestone 2, I suggested that I would use the iPhone camera in order to utilize the OPEN/CLOSE commands.
@@ -17,75 +55,6 @@ The GET requests can be seen upon startup, which indicates the status of the Sky
 The POST requests can be seen when the user taps OPEN/CLOSE, which will be met with a successful status code and a post result.
 
 
-master schedule *11-14-17*
-    -cloud drop
-        -getting schedule info from cloud drop contoller (master)
-        - scheduling only in one place (master)
-        -app mirroring what is in device
-        - be able to have commands that app can send via server
-        - vice versa: LAN direct commands when not on network
-        - controller doesnt know time/date data
-            -pings server to determine time
-                -in smart device
-                    -if powered, you can use system clock and occasionally check
-                    - ping every once in a while
-            -scheduling in phone itself (not robust)
-            -move to operator for full independent build
--get feedback that server recieved POST/GET RTT Feedback~
-- use QR code for setup to obtain device ID information
-    -voice command makes more sense from control setup
-    
-    
-    11-28-17
-    
-    coltonsundstrom
-        server support
-        transition for next quarter
-        
-setup?
 
-server in middle
-    sevrer is static always known location
-    POST server side
-        TLS auth (token based)
-        authenticate then get status
-        username and password in plaintext
-        then get token for future authentication
-schedule
-    proc a task when get POST for scheduling
-    send MQTT comnmands
-    point to point stretch goal
-
-QR code / Setup
-    GPS tag when setup
-    QR code has ID number
-    Pin on map
-
-user feedback
-    watchdog timer
-    timeout?
-    status update
-    
-    12-5-17
-    two tables
-    devices ->statuses
-    users   -> register (POST) -> macaddress password user
-            -> login    (POST) -> user password
-    
-    QR Code -> not randomly made up
-    MQTT -> sends topic (Devices)
-       anyone posts server listens
-       processes it by putting it into database
-       take mac address for physical device
-            embed macadress into qr code
-            address already exists
-            
-    new flow
-    
-    app launch -> register w/ camera -> login
-    
-    next group -> encrypt login
-        public/private key
-        get key -> GET server sends public key 
         
     

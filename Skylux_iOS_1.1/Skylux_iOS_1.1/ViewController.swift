@@ -2,20 +2,20 @@
 //  ViewController.swift
 //  Skylux_iOS_1.1
 //
-//  Created by James Green on 11/9/17.
+//  Created by James Green
 //  Copyright © 2017 James Green. All rights reserved.
 //
 //  Uses Speech recognition kit instead of AR camera kit as mentioned in Milestone 2
 
 import UIKit
 import Speech
+import MapKit
 
-//made global so other functions can access
-var jsonResponse : [String:AnyObject]?
-var authToken : String?
-
-class ViewController: UIViewController, SFSpeechRecognizerDelegate {
-    
+class ViewController: UIViewController, SFSpeechRecognizerDelegate, CLLocationManagerDelegate {
+    var authToken : String?
+    var jsonResponse : [String:AnyObject]?
+    var skylightStatus: Int?
+    var locationManager: CLLocationManager?
     
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var micButton: UIButton!
@@ -39,7 +39,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             stopRecButton.isHidden = false
             stopRecButton.isEnabled = true
         } catch{
-            print("don't crash when you double tap the button")
+            print("Tap the button only once")
         }
     }
     
@@ -73,7 +73,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         var resultString = ""
         let node = audioEngine.inputNode
         let format = node.outputFormat(forBus: 0)
-        node.removeTap(onBus: 0)
+        node.removeTap(onBus: 0) //prevent multiple busses from being installed
         node.installTap(onBus: 0, bufferSize: 1024, format: format) {buffer, _ in
             self.request.append(buffer)
         }
@@ -102,6 +102,28 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                     self.onOpenTapped(AnyClass.self)
                     print("open")
                 }
+                else if whatTheySaid.contains("close")
+                {
+                    self.stopRecordingTapped(AnyClass.self)
+                    self.onCloseTapped(AnyClass.self)
+                }
+                else if whatTheySaid.contains("history")
+                {
+                    self.stopRecordingTapped(AnyClass.self)
+                    self.performSegue(withIdentifier: "historySegue", sender: self)
+                }
+                else if whatTheySaid.contains("schedule")
+                {
+                    self.stopRecordingTapped(AnyClass.self)
+                    self.performSegue(withIdentifier: "optionsSegue", sender: self)
+                }
+                else if whatTheySaid.contains("help")
+                {
+                    self.stopRecordingTapped(AnyClass.self)
+                    self.performSegue(withIdentifier: "helpSegue", sender: self)
+                }
+                
+                
             } else if let err = err{
                 print("@@@@@@")
                 print(err)
@@ -112,9 +134,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBAction func onOpenTapped(_ sender: Any) {
         print("open!")
         busyLock()
-        let parameters = ["command": "ON"]
-        var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
-        urlString.append(String(describing: deviceNumber))
+        let parameters = ["command": "ON",
+                          "token": self.authToken!]
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/device"
+        //urlString.append(String(describing: deviceNumber))
         print("*****")
         print(urlString)
         guard let url = URL(string:urlString) else {return}
@@ -131,6 +154,12 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments)
                     print(json)
+                    print("Location is \(self.locationManager?.location?.coordinate)")
+                    global_historyobj.append(name: "Open", coord: (self.locationManager?.location?.coordinate)!)
+                    let coord = self.locationManager?.location?.coordinate
+                    UserDefaults.standard.set("Open", forKey: "lastCommand")
+                    UserDefaults.standard.set(String(describing: coord!.latitude), forKey: "lastCommandLat")
+                    UserDefaults.standard.set(String(describing: coord!.longitude), forKey: "lastCommandLon")
 
                 }catch{
                     print("there was an error")
@@ -142,11 +171,13 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             }.resume()
         
     }
+    
     @IBAction func onCloseTapped(_ sender: Any) {
         busyLock()
-        let parameters = ["command": "OFF"]
-        var urlString = "http://coltonsundstrom.net:5000/skylux/api/device/"
-        urlString.append(String(describing: deviceNumber))
+        let parameters = ["command": "OFF",
+                          "token": self.authToken!]
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/device"
+        //urlString.append(String(describing: deviceNumber))
         print("*****")
         print(urlString)
         guard let url = URL(string:urlString) else {return}
@@ -163,7 +194,15 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
                     print(json)
-
+                    print("Location is \(self.locationManager?.location?.coordinate)")
+                    
+                    global_historyobj.append(name: "Close", coord: (self.locationManager?.location?.coordinate)!)
+                    let coord = self.locationManager?.location?.coordinate
+                    let lat = String(describing: coord!.latitude)
+                    let lon = String(describing: coord!.longitude)
+                    UserDefaults.standard.set("Close", forKey: "lastCommand")
+                    UserDefaults.standard.set(lat, forKey: "lastCommandLat")
+                    UserDefaults.standard.set(lon, forKey: "lastCommandLon")
                 }catch{
                     print(error)
                 }
@@ -197,34 +236,47 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         
     }
     
-    let apiClient = APIClient(endpointURL: "http://coltonsundstrom.net:5000/skylux/api/status/2")
-
     override func viewDidLoad() {
-        if authToken == nil{
+        print("starting location manager")
+        let retrievedAuth = UserDefaults.standard.object(forKey: "auth_token")
+        self.authToken = retrievedAuth as? String
+        if retrievedAuth == nil{
             performSegue(withIdentifier: "loginSegue", sender: Any?.self)
-        
         };
-        DispatchQueue.global(qos: .userInitiated).async {
-            // Download file or perform expensive task
-            self.busyLock()
-            self.apiClient.get()
-            self.busyUnlock()
-            DispatchQueue.main.async {
-                super.viewDidLoad()
-                // Update the UI
-            }
+        self.locationManager = CLLocationManager()
+        locationManager?.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            print("WE'RE IN")
+            locationManager?.delegate = self
+            locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager?.startUpdatingLocation()
         }
+        
+        print("Location is \(locationManager?.location?.coordinate)")
+        print("end location manager")
+        
+        //DispatchQueue.global(qos: .userInitiated).async {
+        //    // Download file or perform expensive task
+        //    self.busyLock()
+        //    self.apiClient.get()
+        //    self.busyUnlock()
+        //    DispatchQueue.main.async {
+        //        // Update the UI
+        //    }
+       // }
+        super.viewDidLoad()
+        print("END LOAD")
+
     }
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let jsonResponse = apiClient.completion
         if(segue.identifier == "statusSegue"){
-            print("Is the response empty now???")
-            print("now gonna send it to the status screen")
-            let destVC = segue.destination as! StatusViewController
-            destVC.jsonGetResponse = (jsonResponse as! (Bool, AnyObject))
             
+            //let destVC = segue.destination as! StatusViewController
+            //destVC.status = skylightStatus
+            //print("DESTVC STATUS IS \(destVC.status)")
         }
     }
 

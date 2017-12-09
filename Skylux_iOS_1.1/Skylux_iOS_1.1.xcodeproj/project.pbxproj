@@ -18,9 +18,12 @@
 		D7195F1C1FD63B6700662E5C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7195F1B1FD63B6700662E5C /* RegisterViewController.swift */; };
 		D7195F1E1FD63CC400662E5C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7195F1D1FD63CC400662E5C /* EntryViewController.swift */; };
 		D7195F201FD68AF500662E5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7195F1F1FD68AF500662E5C /* User.swift */; };
+		D7A27CF21FD7E08000D73322 /* SkylightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A27CF11FD7E08000D73322 /* SkylightViewController.swift */; };
+		D7A27CF41FD7F48900D73322 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A27CF31FD7F48900D73322 /* QRViewController.swift */; };
 		D7B69F841FCD1CAE008EE88B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B69F831FCD1CAE008EE88B /* OptionsViewController.swift */; };
 		D7B69F861FCE0D6D008EE88B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B69F851FCE0D6D008EE88B /* LoginViewController.swift */; };
-		D7BEA2381FBC07200073B89B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BEA2371FBC07200073B89B /* APIClient.swift */; };
+		D7B856E61FD8B51A00E0DDB3 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B856E41FD8B51A00E0DDB3 /* LaunchScreen.swift */; };
+		D7B856EB1FDA9DC600E0DDB3 /* history.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B856EA1FDA9DC600E0DDB3 /* history.swift */; };
 		D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7032B1FB5235400D7689A /* AppDelegate.swift */; };
 		D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7032D1FB5235400D7689A /* ViewController.swift */; };
 		D7D703311FB5235400D7689A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D7032F1FB5235400D7689A /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 		D7D703361FB5235400D7689A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D703341FB5235400D7689A /* LaunchScreen.storyboard */; };
 		D7D703411FB5235500D7689A /* Skylux_iOS_1_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D703401FB5235500D7689A /* Skylux_iOS_1_1Tests.swift */; };
 		D7D7034C1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7034B1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift */; };
+		D7E9BF981FDB7FBF00C3400E /* DummyDevice.py in Resources */ = {isa = PBXBuildFile; fileRef = D7E9BF971FDB7FBF00C3400E /* DummyDevice.py */; };
+		D7E9BF9A1FDB800500C3400E /* CLIENT_NOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = D7E9BF991FDB800500C3400E /* CLIENT_NOTES.md */; };
+		D7E9BF9C1FDB82FC00C3400E /* SKYLUX_MAC.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E9BF9B1FDB82FC00C3400E /* SKYLUX_MAC.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +66,12 @@
 		D7195F1B1FD63B6700662E5C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D7195F1D1FD63CC400662E5C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		D7195F1F1FD68AF500662E5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D7A27CF11FD7E08000D73322 /* SkylightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylightViewController.swift; sourceTree = "<group>"; };
+		D7A27CF31FD7F48900D73322 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		D7B69F831FCD1CAE008EE88B /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		D7B69F851FCE0D6D008EE88B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D7BEA2371FBC07200073B89B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		D7B856E41FD8B51A00E0DDB3 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		D7B856EA1FDA9DC600E0DDB3 /* history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = history.swift; sourceTree = "<group>"; };
 		D7D703281FB5235400D7689A /* Skylux_iOS_1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylux_iOS_1.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D7032B1FB5235400D7689A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7D7032D1FB5235400D7689A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +85,9 @@
 		D7D703471FB5235500D7689A /* Skylux_iOS_1.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skylux_iOS_1.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D7034B1FB5235500D7689A /* Skylux_iOS_1_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skylux_iOS_1_1UITests.swift; sourceTree = "<group>"; };
 		D7D7034D1FB5235500D7689A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E9BF971FDB7FBF00C3400E /* DummyDevice.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = DummyDevice.py; sourceTree = "<group>"; };
+		D7E9BF991FDB800500C3400E /* CLIENT_NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLIENT_NOTES.md; sourceTree = "<group>"; };
+		D7E9BF9B1FDB82FC00C3400E /* SKYLUX_MAC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SKYLUX_MAC.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +129,10 @@
 		D7D7031F1FB5235400D7689A = {
 			isa = PBXGroup;
 			children = (
+				D7E9BF9B1FDB82FC00C3400E /* SKYLUX_MAC.png */,
+				D7E9BF971FDB7FBF00C3400E /* DummyDevice.py */,
 				D709D67E1FB918F10038424B /* README.md */,
+				D7E9BF991FDB800500C3400E /* CLIENT_NOTES.md */,
 				D7D7032A1FB5235400D7689A /* Skylux_iOS_1.1 */,
 				D7D7033F1FB5235500D7689A /* Skylux_iOS_1.1Tests */,
 				D7D7034A1FB5235500D7689A /* Skylux_iOS_1.1UITests */,
@@ -139,14 +154,17 @@
 			isa = PBXGroup;
 			children = (
 				D7D7032F1FB5235400D7689A /* Main.storyboard */,
+				D7A27CF31FD7F48900D73322 /* QRViewController.swift */,
+				D7A27CF11FD7E08000D73322 /* SkylightViewController.swift */,
 				D7195F1F1FD68AF500662E5C /* User.swift */,
+				D7B856EA1FDA9DC600E0DDB3 /* history.swift */,
 				D7195F1D1FD63CC400662E5C /* EntryViewController.swift */,
+				D7B856E41FD8B51A00E0DDB3 /* LaunchScreen.swift */,
 				D7195F1B1FD63B6700662E5C /* RegisterViewController.swift */,
 				D7B69F851FCE0D6D008EE88B /* LoginViewController.swift */,
 				D7D7032B1FB5235400D7689A /* AppDelegate.swift */,
 				D7D7032D1FB5235400D7689A /* ViewController.swift */,
 				D709D66B1FB66A840038424B /* StatusViewController.swift */,
-				D7BEA2371FBC07200073B89B /* APIClient.swift */,
 				D7B69F831FCD1CAE008EE88B /* OptionsViewController.swift */,
 				D709D66F1FB7CD820038424B /* HistoryViewController.swift */,
 				D709D6791FB7E8490038424B /* helpQuestions */,
@@ -285,10 +303,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E9BF9C1FDB82FC00C3400E /* SKYLUX_MAC.png in Resources */,
 				D7D703361FB5235400D7689A /* LaunchScreen.storyboard in Resources */,
 				D7D703331FB5235400D7689A /* Assets.xcassets in Resources */,
 				D709D67F1FB918F10038424B /* README.md in Resources */,
 				D7D703311FB5235400D7689A /* Main.storyboard in Resources */,
+				D7E9BF981FDB7FBF00C3400E /* DummyDevice.py in Resources */,
+				D7E9BF9A1FDB800500C3400E /* CLIENT_NOTES.md in Resources */,
 				D709D66E1FB6849B0038424B /* skylux_v2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,8 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D7032E1FB5235400D7689A /* ViewController.swift in Sources */,
+				D7B856E61FD8B51A00E0DDB3 /* LaunchScreen.swift in Sources */,
 				D709D66C1FB66A840038424B /* StatusViewController.swift in Sources */,
 				D709D6761FB7DF0D0038424B /* HelpTableViewCell.swift in Sources */,
+				D7B856EB1FDA9DC600E0DDB3 /* history.swift in Sources */,
+				D7A27CF41FD7F48900D73322 /* QRViewController.swift in Sources */,
 				D7195F1C1FD63B6700662E5C /* RegisterViewController.swift in Sources */,
 				D709D6721FB7D0590038424B /* HelpTableViewController.swift in Sources */,
 				D7195F1E1FD63CC400662E5C /* EntryViewController.swift in Sources */,
@@ -325,7 +349,7 @@
 				D7D7032C1FB5235400D7689A /* AppDelegate.swift in Sources */,
 				D709D6741FB7DD750038424B /* helpQuestion.swift in Sources */,
 				D709D6701FB7CD820038424B /* HistoryViewController.swift in Sources */,
-				D7BEA2381FBC07200073B89B /* APIClient.swift in Sources */,
+				D7A27CF21FD7E08000D73322 /* SkylightViewController.swift in Sources */,
 				D7B69F841FCD1CAE008EE88B /* OptionsViewController.swift in Sources */,
 				D7B69F861FCE0D6D008EE88B /* LoginViewController.swift in Sources */,
 			);

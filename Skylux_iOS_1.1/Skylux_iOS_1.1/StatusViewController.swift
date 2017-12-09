@@ -2,7 +2,7 @@
 //  StatusViewController.swift
 //  Skylux_iOS_1.1
 //
-//  Created by James Green on 11/10/17.
+//  Created by James Green
 //  Copyright © 2017 James Green. All rights reserved.
 //
 
@@ -14,33 +14,66 @@ class StatusViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var bodyLabel: UILabel!
     
     var jsonResponse : [String:AnyObject]?
-    var jsonGetResponse: (Bool, AnyObject)?
+    var status: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //print(jsonGetResponse?.1)
-        if let responseArray = jsonGetResponse?.1{
-            print(responseArray)
-        }
-        
-        // Do any additional setup after loading the view.
-       // let skylightStatus = (jsonResponse!["Skylight Status"] as? [[String: Any]])!
-        
-
-        //let skylightStatus = jsonResponse?.popFirst()
-        //let title = skylightStatus?.key
-        //var body  = (skylightStatus?.value as! [Any])
-        //print(body)
-        
-        //titleLabel.text = title
-        //let statusReport = body.popLast()! as! Int
-        //print(statusReport)
-        //if(statusReport > 0){
-        //    bodyLabel.text = "Open"
-       // }
-       // else{
-       //     bodyLabel.text = "Close"
-       // }
+        var urlString = "http://coltonsundstrom.net:5000/skylux/api/status/2" //TODO: mutable url
+        guard let url = URL(string:urlString) else {return}
+        print("making request")
+        var request = URLRequest(url: url)
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, url_response, error) in
+            if let response = url_response{
+                print("response is: ")
+                print(response)
+                print("end response")
+            }
+            
+            if let data = data{
+                print(data)
+                print("***")
+                let rawDataString = String(data: data, encoding: String.Encoding.utf8)
+                print(rawDataString!)
+                do{
+                    print("json response is: ")
+                    self.jsonResponse = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
+                    if(self.jsonResponse != nil){
+                        print(self.jsonResponse!)
+                    }
+                    else{
+                        print("there's nothing here")
+                    }
+                    if(self.jsonResponse?["error"] != nil){
+                        self.performSegue(withIdentifier: "loginSegue", sender: self)
+                    }
+                    if(self.jsonResponse?["Skylight Status"] != nil){
+                        DispatchQueue.main.async {
+                            let status = self.jsonResponse?["Skylight Status"]
+                            //self.performSegue(withIdentifier: "authSegue", sender: self)
+                            print("status IS: \(status! as! Int)")
+                            let intstatus = status! as! Int
+                            
+                            if intstatus > 0{
+                                self.bodyLabel.text = "Open (\(intstatus))"
+                            }
+                            else{
+                                self.bodyLabel.text = "Closed"
+                            }
+                            
+                        }
+                    }
+                    //print(jsonData)
+                    print("end json")
+                } catch{
+                    print("error is")
+                    print(error)
+                    print("end error")
+                }
+            }
+            
+            }.resume()
+        print(status)
+        titleLabel.text = "Skylight Status"
     }
     
 

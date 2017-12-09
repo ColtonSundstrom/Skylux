@@ -2,7 +2,7 @@
 //  OptionsViewController.swift
 //  Skylux_iOS_1.1
 //
-//  Created by James Green on 11/27/17.
+//  Created by James Green
 //  Copyright © 2017 James Green. All rights reserved.
 //
 
@@ -13,10 +13,16 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var datePick: UIDatePicker!
     
     @IBAction func buttonPress(_ sender: Any) {
+        if superUser.requestToken == nil{
+            print("error: not authorized")
+            return
+        }
         let timeInfo = datePick.date.timeIntervalSinceReferenceDate
         print(timeInfo.description)
-        let parameters = ["time": String(describing: timeInfo), "command": "ON"]
-        let urlString = "http://coltonsundstrom.net:5000/skylux/api/schedule/2"
+        let parameters = ["time": String(describing: timeInfo),
+                          "command": "ON",
+                          "token": superUser.requestToken!]
+        let urlString = "http://coltonsundstrom.net:5000/skylux/api/schedule"
         print("*****")
         print(urlString)
         guard let url = URL(string:urlString) else {return}

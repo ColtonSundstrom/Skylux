@@ -1,5 +1,5 @@
 //
-//  EntryViewController.swift
+//  LaunchScreen.swift
 //  Skylux_iOS_1.1
 //
 //  Created by James Green
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class EntryViewController: UIViewController {
-    var authToken: String?
-    
+class LaunchScreen: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 

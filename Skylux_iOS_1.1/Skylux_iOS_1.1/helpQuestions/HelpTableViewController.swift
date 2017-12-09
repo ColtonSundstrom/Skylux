@@ -15,11 +15,11 @@ class HelpTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //create some questions
-        FAQ.append(helpQuestion(question: "Question 1?", answer: "Answer 1"))
-        FAQ.append(helpQuestion(question: "Question 2?", answer: "Answer 2"))
-        FAQ.append(helpQuestion(question: "Question 3?", answer: "Answer 3"))
-        FAQ.append(helpQuestion(question: "Question 4?", answer: "Answer 4"))
-        FAQ.append(helpQuestion(question: "Question 5?", answer: "Answer 5"))
+        FAQ.append(helpQuestion(question: "My command won't go through. Help?", answer: "This is caused by an authentication issue in the application. Log in and try again."))
+        FAQ.append(helpQuestion(question: "What if the skylight won't go up or down all the way?", answer: "The log file must have been misaligned. Contact your network administrator and reset the log file."))
+        FAQ.append(helpQuestion(question: "Does Skylux work offline?", answer: "Unfortunately, an internet connection is required to issue commands."))
+        FAQ.append(helpQuestion(question: "Do I have to be connected to WiFi?", answer: "No! Skylux iOS works from any iOS device with an internet connection."))
+        FAQ.append(helpQuestion(question: "Can hackers see my data?", answer: "No, data is encrypted when sent to the server, so hackers shouldn't be able to see any data."))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

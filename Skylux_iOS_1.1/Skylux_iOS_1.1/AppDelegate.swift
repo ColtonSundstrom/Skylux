@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Skylux_iOS_1.1
 //
-//  Created by James Green on 11/9/17.
+//  Created by James Green
 //  Copyright © 2017 James Green. All rights reserved.
 //
 
