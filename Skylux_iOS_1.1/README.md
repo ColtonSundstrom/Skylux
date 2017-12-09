@@ -6,6 +6,8 @@ App Features:
 
 PROFESSOR SCOVIL READ HERE:
 
+https://github.com/ColtonSundstrom/Skylux/tree/ios_MQTT/Skylux_iOS_1.1
+
 SETUP PROCESS:
 
     1) Ensure you have Paho-MQTT installed. This can be done by running
